@@ -1,0 +1,189 @@
+\hypertarget{tag__ligada_8c}{}\section{tag\+\_\+ligada.\+c File Reference}
+\label{tag__ligada_8c}\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+
+
+Lista ligada de tags.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}tag\+\_\+ligada.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+Include dependency graph for tag\+\_\+ligada.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtag__ligadas}{tag\+\_\+ligadas}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{tag__ligada_8c_aaf472835a406f8ac672af57341fa9cec}{commontag\+\_\+compare} (char $\ast$tag, Tags tags)
+\begin{DoxyCompactList}\small\item\em Função que compara se uma tag é igual a outra. \end{DoxyCompactList}\item 
+Tags \hyperlink{tag__ligada_8c_ae6e1bbb10fb7028dbd29d3f23bcc5d5f}{add\+\_\+tag} (char $\ast$string, Tags lista)
+\begin{DoxyCompactList}\small\item\em Adiciona uma tag à cabeça da lista ligada de tags. \end{DoxyCompactList}\item 
+Tags \hyperlink{tag__ligada_8c_abe3b472cb41c856f61eb57aac93cfbab}{string\+To\+Tag\+\_\+ligada} (char $\ast$str, Tags t)
+\begin{DoxyCompactList}\small\item\em Parte a string de tags em partes menores, ou seja, em cada tag. \end{DoxyCompactList}\item 
+void \hyperlink{tag__ligada_8c_af9613d43e13ab3d0ef96e7d550679bc7}{free\+\_\+tag} (Tags t)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocada para as Tags, lista ligada e apontador para a proxima. \end{DoxyCompactList}\item 
+Tags \hyperlink{tag__ligada_8c_a1e971584c30b02a4b4f0d0df094964e6}{clone\+\_\+\+Tags} (Tags l)
+\begin{DoxyCompactList}\small\item\em Faz um clone da lista ligada para não se perder informação. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{tag__ligada_8c_ad51999c769b704c81bdc00684ac57d19}{get\+\_\+tag\+\_\+ligada} (Tags t)
+\begin{DoxyCompactList}\small\item\em Retorna o nome da tag da lista de Tags. \end{DoxyCompactList}\item 
+Tags \hyperlink{tag__ligada_8c_a2b1929c466786efdaef6682000403351}{proximo} (Tags t)
+\begin{DoxyCompactList}\small\item\em Percorre a lista ligada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Lista ligada de tags. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!add\+\_\+tag@{add\+\_\+tag}}
+\index{add\+\_\+tag@{add\+\_\+tag}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+tag(char $\ast$string, Tags lista)}{add_tag(char *string, Tags lista)}}]{\setlength{\rightskip}{0pt plus 5cm}Tags add\+\_\+tag (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{Tags}]{lista}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_ae6e1bbb10fb7028dbd29d3f23bcc5d5f}{}\label{tag__ligada_8c_ae6e1bbb10fb7028dbd29d3f23bcc5d5f}
+
+
+Adiciona uma tag à cabeça da lista ligada de tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em lista} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a lista ligada de Tags 
+\end{DoxyReturn}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!clone\+\_\+\+Tags@{clone\+\_\+\+Tags}}
+\index{clone\+\_\+\+Tags@{clone\+\_\+\+Tags}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{clone\+\_\+\+Tags(\+Tags l)}{clone_Tags(Tags l)}}]{\setlength{\rightskip}{0pt plus 5cm}Tags clone\+\_\+\+Tags (
+\begin{DoxyParamCaption}
+\item[{Tags}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_a1e971584c30b02a4b4f0d0df094964e6}{}\label{tag__ligada_8c_a1e971584c30b02a4b4f0d0df094964e6}
+
+
+Faz um clone da lista ligada para não se perder informação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna as Tags 
+\end{DoxyReturn}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!commontag\+\_\+compare@{commontag\+\_\+compare}}
+\index{commontag\+\_\+compare@{commontag\+\_\+compare}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{commontag\+\_\+compare(char $\ast$tag, Tags tags)}{commontag_compare(char *tag, Tags tags)}}]{\setlength{\rightskip}{0pt plus 5cm}int commontag\+\_\+compare (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{tag, }
+\item[{Tags}]{tags}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_aaf472835a406f8ac672af57341fa9cec}{}\label{tag__ligada_8c_aaf472835a406f8ac672af57341fa9cec}
+
+
+Função que compara se uma tag é igual a outra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & \\
+\hline
+{\em tags} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+se as tags sao iguais ou não 
+\end{DoxyReturn}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!free\+\_\+tag@{free\+\_\+tag}}
+\index{free\+\_\+tag@{free\+\_\+tag}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+tag(\+Tags t)}{free_tag(Tags t)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+tag (
+\begin{DoxyParamCaption}
+\item[{Tags}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_af9613d43e13ab3d0ef96e7d550679bc7}{}\label{tag__ligada_8c_af9613d43e13ab3d0ef96e7d550679bc7}
+
+
+Liberta a memoria alocada para as Tags, lista ligada e apontador para a proxima. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!get\+\_\+tag\+\_\+ligada@{get\+\_\+tag\+\_\+ligada}}
+\index{get\+\_\+tag\+\_\+ligada@{get\+\_\+tag\+\_\+ligada}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+tag\+\_\+ligada(\+Tags t)}{get_tag_ligada(Tags t)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+tag\+\_\+ligada (
+\begin{DoxyParamCaption}
+\item[{Tags}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_ad51999c769b704c81bdc00684ac57d19}{}\label{tag__ligada_8c_ad51999c769b704c81bdc00684ac57d19}
+
+
+Retorna o nome da tag da lista de Tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o nome da tag 
+\end{DoxyReturn}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!proximo@{proximo}}
+\index{proximo@{proximo}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{proximo(\+Tags t)}{proximo(Tags t)}}]{\setlength{\rightskip}{0pt plus 5cm}Tags proximo (
+\begin{DoxyParamCaption}
+\item[{Tags}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_a2b1929c466786efdaef6682000403351}{}\label{tag__ligada_8c_a2b1929c466786efdaef6682000403351}
+
+
+Percorre a lista ligada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o apontador para a proxima posição da lista ligada 
+\end{DoxyReturn}
+\index{tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}!string\+To\+Tag\+\_\+ligada@{string\+To\+Tag\+\_\+ligada}}
+\index{string\+To\+Tag\+\_\+ligada@{string\+To\+Tag\+\_\+ligada}!tag\+\_\+ligada.\+c@{tag\+\_\+ligada.\+c}}
+\subsubsection[{\texorpdfstring{string\+To\+Tag\+\_\+ligada(char $\ast$str, Tags t)}{stringToTag_ligada(char *str, Tags t)}}]{\setlength{\rightskip}{0pt plus 5cm}Tags string\+To\+Tag\+\_\+ligada (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{Tags}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{tag__ligada_8c_abe3b472cb41c856f61eb57aac93cfbab}{}\label{tag__ligada_8c_abe3b472cb41c856f61eb57aac93cfbab}
+
+
+Parte a string de tags em partes menores, ou seja, em cada tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna as Tags 
+\end{DoxyReturn}

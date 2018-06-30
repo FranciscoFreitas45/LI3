@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['calcpossiblenodes',['calcpossiblenodes',['../avl_8c.html#aef90ff0394349f22476566c86052a883',1,'avl.c']]],
+  ['clean',['clean',['../interface_8c.html#ab7f080e43dc99c5cde2c66249cafa252',1,'interface.c']]],
+  ['clone_5fdata',['clone_DATA',['../data_8c.html#af28c4e945427aab3db4f8d903b05ec9a',1,'data.c']]],
+  ['clone_5ftags',['clone_Tags',['../tag__ligada_8c.html#a1e971584c30b02a4b4f0d0df094964e6',1,'tag_ligada.c']]],
+  ['commontag_5fcompare',['commontag_compare',['../tag__ligada_8c.html#aaf472835a406f8ac672af57341fa9cec',1,'tag_ligada.c']]],
+  ['comparadatas',['comparaDatas',['../data_8c.html#aad02c8f40b86db7f3f28ef02d3e38e43',1,'data.c']]],
+  ['concat',['concat',['../structgen_8c.html#aec2c801ed0620378f1f7f2cceee8df9f',1,'structgen.c']]],
+  ['contains_5fword',['contains_word',['../interface_8c.html#aade1f77088e1f4e6806c3ee8d33a5d41',1,'interface.c']]],
+  ['contido',['contido',['../structgen_8c.html#a9f3db46582f9703f54c6e778ea083144',1,'structgen.c']]],
+  ['cotacao',['cotacao',['../avl_8c.html#a9c857bde2e9c3368741e9c3037fffa6d',1,'avl.c']]],
+  ['creat_5farray',['creat_ARRAY',['../structgen_8c.html#a2c8265cdbeb0e8614c65a1d5f9a4be93',1,'structgen.c']]],
+  ['creat_5farray_5ftags',['creat_ARRAY_TAGS',['../structgen_8c.html#adb1dc216fa1d55391d5ba255339e9a57',1,'structgen.c']]],
+  ['creat_5farrayd',['creat_ARRAYD',['../structgen_8c.html#a3be3127f5d0c30beec5c82acbf1ff708',1,'structgen.c']]],
+  ['create_5ftag',['create_tag',['../mytag_8c.html#a758b4465d82b592dfea7f8bbdc079155',1,'mytag.c']]],
+  ['createowner',['createOwner',['../owner_8c.html#a50ffb8d194a013b54b44beafa0df74cb',1,'owner.c']]],
+  ['createpost',['createPost',['../posts_8c.html#a9fd3a49b87a1f9e6243f9111c5a382ad',1,'posts.c']]],
+  ['createstack',['createStack',['../structgen_8c.html#ac0bb616f07bffb005a8d807a5d66b6e2',1,'structgen.c']]],
+  ['createusers',['createUsers',['../users_8c.html#a42c12561840f02ef354b02ef67ea9a7b',1,'users.c']]],
+  ['creatnewnode',['creatNewNode',['../avl_8c.html#aec7f0631fcfe5d1e0d7926e94c525d42',1,'avl.c']]]
+];

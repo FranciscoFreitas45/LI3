@@ -1,0 +1,275 @@
+\hypertarget{load_8c}{}\section{load.\+c File Reference}
+\label{load_8c}\index{load.\+c@{load.\+c}}
+
+
+Função que serve para comparar as keys.  
+
+
+{\ttfamily \#include $<$date.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$glib.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}owner.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libxml/xmlmemory.\+h$>$}\\*
+{\ttfamily \#include $<$libxml/parser.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}users.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}posts.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}load.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}avl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mytag.\+h\char`\"{}}\\*
+Include dependency graph for load.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+gint {\bfseries Compare\+Names} (gconstpointer name1, gconstpointer name2)\hypertarget{load_8c_a54cfc0db688ff1bce2e02009ae2f81d3}{}\label{load_8c_a54cfc0db688ff1bce2e02009ae2f81d3}
+
+\item 
+gboolean \hyperlink{load_8c_a42fca796a2f08cace0715d0b351dfc9d}{run\+\_\+\+Users\+\_\+for\+Post} (gpointer key, gpointer value, gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função utilizada pelo g\+\_\+tree\+\_\+foreach para acabar de preencher as G\+Trees. Na G\+Tree de posts preenche em a struct Owner e na G\+Tree de users insere o post no array dos posts do user. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_acb006c61bbbfa676b30640ab9c4c7acf}{parser\+Post} (xml\+Doc\+Ptr doc, G\+Tree $\ast$tree)
+\begin{DoxyCompactList}\small\item\em Função que faz o parser da informação do ficheiro Posts.\+xml para a Gtree de posts. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_aec83b4c716c3d84b63e5de9d47aee9c0}{parser\+Users} (xml\+Doc\+Ptr doc, G\+Tree $\ast$tree\+Users)
+\begin{DoxyCompactList}\small\item\em Função que faz o parser da informação do ficheiro Users.\+xml para a Gtree de users. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_a9e639713437290fa130171a58434711c}{parser\+Tags} (xml\+Doc\+Ptr doc, G\+Hash\+Table $\ast$Tags)
+\begin{DoxyCompactList}\small\item\em Função que faz o parser da informação do ficheiro Tags.\+xml para a G\+Hash\+Table. \end{DoxyCompactList}\item 
+gboolean \hyperlink{load_8c_a21cbd3fba79ced5bbd21f740daac030d}{glibto\+A\+VL} (gpointer key, gpointer value, gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função usada no g\+\_\+tree\+\_\+foreach que insere na Avl ordenada por data os posts correndo a Gtree dos posts. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_aecc0c0f3046efd1b6fddc88c2a23a502}{parse\+Doc} (char $\ast$docname, char $\ast$docname2, char $\ast$docname3, G\+Tree $\ast$tree, G\+Tree $\ast$tree\+Users, G\+Hash\+Table $\ast$tags)
+\begin{DoxyCompactList}\small\item\em Função que invoca as funções parser\+Post , parser\+Users e parser\+Tags. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_a87ece4911ecffa3da357af6f390cd942}{freeposts} (gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função passada como argumento em g\+\_\+tree\+\_\+new\+\_\+full para destruir os posts da Gtree. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_a5bc5e4cab9757f85179aec27e2144cfd}{freeusers} (gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função passada como argumento em g\+\_\+tree\+\_\+new\+\_\+full para destruir os users da Gtree. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_aad9b6fc9fe8b8422246315bf6aaca90d}{freetags} (gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função passada como argumento em g\+\_\+hash\+\_\+table\+\_\+new\+\_\+full para destruir as tags da G\+Hashtable. \end{DoxyCompactList}\item 
+void \hyperlink{load_8c_ae8d3c9b596f7ad8f79e6b374886af38c}{freeauxtags} (gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função passada como argumento em g\+\_\+hash\+\_\+table\+\_\+new\+\_\+full para destruir as tags da G\+Hashtable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Função que serve para comparar as keys. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em key1} & \\
+\hline
+{\em key2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor pela a qual irá ser inserida 
+\end{DoxyReturn}
+
+
+\subsection{Function Documentation}
+\index{load.\+c@{load.\+c}!freeauxtags@{freeauxtags}}
+\index{freeauxtags@{freeauxtags}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{freeauxtags(gpointer data)}{freeauxtags(gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}void freeauxtags (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_ae8d3c9b596f7ad8f79e6b374886af38c}{}\label{load_8c_ae8d3c9b596f7ad8f79e6b374886af38c}
+
+
+Função passada como argumento em g\+\_\+hash\+\_\+table\+\_\+new\+\_\+full para destruir as tags da G\+Hashtable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+U\+X\+T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!freeposts@{freeposts}}
+\index{freeposts@{freeposts}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{freeposts(gpointer data)}{freeposts(gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}void freeposts (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_a87ece4911ecffa3da357af6f390cd942}{}\label{load_8c_a87ece4911ecffa3da357af6f390cd942}
+
+
+Função passada como argumento em g\+\_\+tree\+\_\+new\+\_\+full para destruir os posts da Gtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!freetags@{freetags}}
+\index{freetags@{freetags}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{freetags(gpointer data)}{freetags(gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}void freetags (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_aad9b6fc9fe8b8422246315bf6aaca90d}{}\label{load_8c_aad9b6fc9fe8b8422246315bf6aaca90d}
+
+
+Função passada como argumento em g\+\_\+hash\+\_\+table\+\_\+new\+\_\+full para destruir as tags da G\+Hashtable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!freeusers@{freeusers}}
+\index{freeusers@{freeusers}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{freeusers(gpointer data)}{freeusers(gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}void freeusers (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_a5bc5e4cab9757f85179aec27e2144cfd}{}\label{load_8c_a5bc5e4cab9757f85179aec27e2144cfd}
+
+
+Função passada como argumento em g\+\_\+tree\+\_\+new\+\_\+full para destruir os users da Gtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Users} & \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!glibto\+A\+VL@{glibto\+A\+VL}}
+\index{glibto\+A\+VL@{glibto\+A\+VL}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{glibto\+A\+V\+L(gpointer key, gpointer value, gpointer data)}{glibtoAVL(gpointer key, gpointer value, gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}gboolean glibto\+A\+VL (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{key, }
+\item[{gpointer}]{value, }
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_a21cbd3fba79ced5bbd21f740daac030d}{}\label{load_8c_a21cbd3fba79ced5bbd21f740daac030d}
+
+
+Função usada no g\+\_\+tree\+\_\+foreach que insere na Avl ordenada por data os posts correndo a Gtree dos posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & \\
+\hline
+{\em Nodo} & da Gtree de posts \\
+\hline
+{\em A\+VL} & de posts \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False para iterar a Gtree até ao fim 
+\end{DoxyReturn}
+\index{load.\+c@{load.\+c}!parse\+Doc@{parse\+Doc}}
+\index{parse\+Doc@{parse\+Doc}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{parse\+Doc(char $\ast$docname, char $\ast$docname2, char $\ast$docname3, G\+Tree $\ast$tree, G\+Tree $\ast$tree\+Users, G\+Hash\+Table $\ast$tags)}{parseDoc(char *docname, char *docname2, char *docname3, GTree *tree, GTree *treeUsers, GHashTable *tags)}}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Doc (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{docname, }
+\item[{char $\ast$}]{docname2, }
+\item[{char $\ast$}]{docname3, }
+\item[{G\+Tree $\ast$}]{tree, }
+\item[{G\+Tree $\ast$}]{tree\+Users, }
+\item[{G\+Hash\+Table $\ast$}]{tags}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_aecc0c0f3046efd1b6fddc88c2a23a502}{}\label{load_8c_aecc0c0f3046efd1b6fddc88c2a23a502}
+
+
+Função que invoca as funções parser\+Post , parser\+Users e parser\+Tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ficheiro} & Posts.\+xml \\
+\hline
+{\em Ficheiro} & Users.\+xml \\
+\hline
+{\em Ficheiro} & Tags.\+xml \\
+\hline
+{\em Gtree} & de posts \\
+\hline
+{\em Gtree} & de users \\
+\hline
+{\em G\+Hash\+Table} & de tags \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!parser\+Post@{parser\+Post}}
+\index{parser\+Post@{parser\+Post}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{parser\+Post(xml\+Doc\+Ptr doc, G\+Tree $\ast$tree)}{parserPost(xmlDocPtr doc, GTree *tree)}}]{\setlength{\rightskip}{0pt plus 5cm}void parser\+Post (
+\begin{DoxyParamCaption}
+\item[{xml\+Doc\+Ptr}]{doc, }
+\item[{G\+Tree $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_acb006c61bbbfa676b30640ab9c4c7acf}{}\label{load_8c_acb006c61bbbfa676b30640ab9c4c7acf}
+
+
+Função que faz o parser da informação do ficheiro Posts.\+xml para a Gtree de posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ficheiro} & Post.\+xml \\
+\hline
+{\em Gtree} & de posts \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!parser\+Tags@{parser\+Tags}}
+\index{parser\+Tags@{parser\+Tags}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{parser\+Tags(xml\+Doc\+Ptr doc, G\+Hash\+Table $\ast$\+Tags)}{parserTags(xmlDocPtr doc, GHashTable *Tags)}}]{\setlength{\rightskip}{0pt plus 5cm}void parser\+Tags (
+\begin{DoxyParamCaption}
+\item[{xml\+Doc\+Ptr}]{doc, }
+\item[{G\+Hash\+Table $\ast$}]{Tags}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_a9e639713437290fa130171a58434711c}{}\label{load_8c_a9e639713437290fa130171a58434711c}
+
+
+Função que faz o parser da informação do ficheiro Tags.\+xml para a G\+Hash\+Table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ficheiro} & Tags.\+xml \\
+\hline
+{\em G\+Hash\+Table} & de tags \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!parser\+Users@{parser\+Users}}
+\index{parser\+Users@{parser\+Users}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{parser\+Users(xml\+Doc\+Ptr doc, G\+Tree $\ast$tree\+Users)}{parserUsers(xmlDocPtr doc, GTree *treeUsers)}}]{\setlength{\rightskip}{0pt plus 5cm}void parser\+Users (
+\begin{DoxyParamCaption}
+\item[{xml\+Doc\+Ptr}]{doc, }
+\item[{G\+Tree $\ast$}]{tree\+Users}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_aec83b4c716c3d84b63e5de9d47aee9c0}{}\label{load_8c_aec83b4c716c3d84b63e5de9d47aee9c0}
+
+
+Função que faz o parser da informação do ficheiro Users.\+xml para a Gtree de users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ficheiro} & Users.\+xml \\
+\hline
+{\em Gtree} & de Users \\
+\hline
+\end{DoxyParams}
+\index{load.\+c@{load.\+c}!run\+\_\+\+Users\+\_\+for\+Post@{run\+\_\+\+Users\+\_\+for\+Post}}
+\index{run\+\_\+\+Users\+\_\+for\+Post@{run\+\_\+\+Users\+\_\+for\+Post}!load.\+c@{load.\+c}}
+\subsubsection[{\texorpdfstring{run\+\_\+\+Users\+\_\+for\+Post(gpointer key, gpointer value, gpointer data)}{run_Users_forPost(gpointer key, gpointer value, gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}gboolean run\+\_\+\+Users\+\_\+for\+Post (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{key, }
+\item[{gpointer}]{value, }
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{load_8c_a42fca796a2f08cace0715d0b351dfc9d}{}\label{load_8c_a42fca796a2f08cace0715d0b351dfc9d}
+
+
+Função utilizada pelo g\+\_\+tree\+\_\+foreach para acabar de preencher as G\+Trees. Na G\+Tree de posts preenche em a struct Owner e na G\+Tree de users insere o post no array dos posts do user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em Nodo} & da Gtree de posts \\
+\hline
+{\em G\+Tree} & de users \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor pela a qual irá ser inserida 
+\end{DoxyReturn}

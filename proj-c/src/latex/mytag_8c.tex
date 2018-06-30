@@ -1,0 +1,141 @@
+\hypertarget{mytag_8c}{}\section{mytag.\+c File Reference}
+\label{mytag_8c}\index{mytag.\+c@{mytag.\+c}}
+
+
+Guarda o id da tag e uma string com o nome da tag.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}mytag.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+Include dependency graph for mytag.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmytags}{mytags}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+A\+GS \hyperlink{mytag_8c_a758b4465d82b592dfea7f8bbdc079155}{create\+\_\+tag} (long id, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Recebe o id e o nome da tag e cria uma nova tag. \end{DoxyCompactList}\item 
+long \hyperlink{mytag_8c_a099cef7a4cbed1e6986a2ca5a745fd92}{get\+\_\+tag\+\_\+id} (T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Recebe a tag e procura o id da mesma. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{mytag_8c_a2fb7d44fbfec06dee3f718330eca5ebf}{get\+\_\+tag\+\_\+name} (T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Recebe a tag e procura o nome da mesma, em forma de String. \end{DoxyCompactList}\item 
+void \hyperlink{mytag_8c_ac2bd964b4085b1f4abd763fcbade7d26}{set\+\_\+id} (T\+A\+GS t, long id)
+\begin{DoxyCompactList}\small\item\em Recebe a tag e o id da tag, e atualiza o id da mesma na struct. \end{DoxyCompactList}\item 
+void \hyperlink{mytag_8c_aebbd05f71107a15f5290f44beedff6a4}{free\+\_\+\+T\+AG} (T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocada para a struct T\+A\+GS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Guarda o id da tag e uma string com o nome da tag. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{mytag.\+c@{mytag.\+c}!create\+\_\+tag@{create\+\_\+tag}}
+\index{create\+\_\+tag@{create\+\_\+tag}!mytag.\+c@{mytag.\+c}}
+\subsubsection[{\texorpdfstring{create\+\_\+tag(long id, char $\ast$name)}{create_tag(long id, char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+GS create\+\_\+tag (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{mytag_8c_a758b4465d82b592dfea7f8bbdc079155}{}\label{mytag_8c_a758b4465d82b592dfea7f8bbdc079155}
+
+
+Recebe o id e o nome da tag e cria uma nova tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return T\+A\+GS 
+\end{DoxyReturn}
+\index{mytag.\+c@{mytag.\+c}!free\+\_\+\+T\+AG@{free\+\_\+\+T\+AG}}
+\index{free\+\_\+\+T\+AG@{free\+\_\+\+T\+AG}!mytag.\+c@{mytag.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+\+T\+A\+G(\+T\+A\+G\+S t)}{free_TAG(TAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+\+T\+AG (
+\begin{DoxyParamCaption}
+\item[{T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{mytag_8c_aebbd05f71107a15f5290f44beedff6a4}{}\label{mytag_8c_aebbd05f71107a15f5290f44beedff6a4}
+
+
+Liberta a memoria alocada para a struct T\+A\+GS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\index{mytag.\+c@{mytag.\+c}!get\+\_\+tag\+\_\+id@{get\+\_\+tag\+\_\+id}}
+\index{get\+\_\+tag\+\_\+id@{get\+\_\+tag\+\_\+id}!mytag.\+c@{mytag.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+tag\+\_\+id(\+T\+A\+G\+S t)}{get_tag_id(TAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+tag\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{mytag_8c_a099cef7a4cbed1e6986a2ca5a745fd92}{}\label{mytag_8c_a099cef7a4cbed1e6986a2ca5a745fd92}
+
+
+Recebe a tag e procura o id da mesma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o id da tag recebida 
+\end{DoxyReturn}
+\index{mytag.\+c@{mytag.\+c}!get\+\_\+tag\+\_\+name@{get\+\_\+tag\+\_\+name}}
+\index{get\+\_\+tag\+\_\+name@{get\+\_\+tag\+\_\+name}!mytag.\+c@{mytag.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+tag\+\_\+name(\+T\+A\+G\+S t)}{get_tag_name(TAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+tag\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{mytag_8c_a2fb7d44fbfec06dee3f718330eca5ebf}{}\label{mytag_8c_a2fb7d44fbfec06dee3f718330eca5ebf}
+
+
+Recebe a tag e procura o nome da mesma, em forma de String. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+o nome da tag 
+\end{DoxyReturn}
+\index{mytag.\+c@{mytag.\+c}!set\+\_\+id@{set\+\_\+id}}
+\index{set\+\_\+id@{set\+\_\+id}!mytag.\+c@{mytag.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+id(\+T\+A\+G\+S t, long id)}{set_id(TAGS t, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{T\+A\+GS}]{t, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{mytag_8c_ac2bd964b4085b1f4abd763fcbade7d26}{}\label{mytag_8c_ac2bd964b4085b1f4abd763fcbade7d26}
+
+
+Recebe a tag e o id da tag, e atualiza o id da mesma na struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}

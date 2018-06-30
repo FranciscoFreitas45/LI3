@@ -1,0 +1,7 @@
+README.md
+file.txt
+include
+relatorio.pdf
+src
+try
+try.docx

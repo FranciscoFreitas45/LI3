@@ -1,0 +1,982 @@
+\hypertarget{structgen_8c}{}\section{structgen.\+c File Reference}
+\label{structgen_8c}\index{structgen.\+c@{structgen.\+c}}
+
+
+Guarda a informação necesaria em arrays que envolva sempre duas variaveis(uma int e outra long) como por exemplo id de users e o numero de posts deles.  
+
+
+{\ttfamily \#include \char`\"{}users.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}glib.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}structgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\\*
+Include dependency graph for structgen.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structarraygeral}{arraygeral}
+\item 
+struct \hyperlink{structauxTags}{aux\+Tags}
+\begin{DoxyCompactList}\small\item\em Guarda de uma tag e as vezes que foi utilizada. \end{DoxyCompactList}\item 
+struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}
+\begin{DoxyCompactList}\small\item\em Guarda a informação necesaria em arrays que envolva sempre duas variaveis(uma int e outra do tipo D\+A\+T\+A) como por exemplo id de users e o numero de posts deles. \end{DoxyCompactList}\item 
+struct \hyperlink{structStack}{Stack}
+\begin{DoxyCompactList}\small\item\em Guarda a informação necesaria em numa stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+R\+R\+AY \hyperlink{structgen_8c_a2c8265cdbeb0e8614c65a1d5f9a4be93}{creat\+\_\+\+A\+R\+R\+AY} (int tamanho)
+\begin{DoxyCompactList}\small\item\em Cria a struct arraygeral. \end{DoxyCompactList}\item 
+A\+R\+R\+A\+YD \hyperlink{structgen_8c_a3be3127f5d0c30beec5c82acbf1ff708}{creat\+\_\+\+A\+R\+R\+A\+YD} (int tamanho)
+\begin{DoxyCompactList}\small\item\em Cria a struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a71cb7d3beaccc5e621b12f78c2c72ac5}{get\+\_\+tamanho} (A\+R\+R\+AY arr)
+\begin{DoxyCompactList}\small\item\em Devolve o tamanho da struct arraygeral. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_af8025c5ae2ef70c6888638ef05243551}{get\+\_\+tamanhoD} (A\+R\+R\+A\+YD arr)
+\begin{DoxyCompactList}\small\item\em Devolve o tamanho da struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_ab7d961cd9f4a66bb096d50037f1a80d5}{get\+\_\+used} (A\+R\+R\+AY arr)
+\begin{DoxyCompactList}\small\item\em Devolve o valor do que esta a ser usado na struct arraygeral. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a0d838cc4e505fac3c2d967b36a463764}{get\+\_\+usedD} (A\+R\+R\+A\+YD arr)
+\begin{DoxyCompactList}\small\item\em Devolve o valor do que esta a ser usado na struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{structgen_8c_a478d53251a7224d6ea96b2c1ae2fdaa8}{get\+\_\+array} (A\+R\+R\+AY arr)
+\begin{DoxyCompactList}\small\item\em Devolve o primeiro array da struct arraygeral. \end{DoxyCompactList}\item 
+long $\ast$ \hyperlink{structgen_8c_a1462fb436d6bf7934c30abd6c499347d}{get\+\_\+arrayP} (A\+R\+R\+AY arr)
+\begin{DoxyCompactList}\small\item\em Devolve o segundo array da struct arraygeral. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_ac4087247914d041708240d4b2d8a74cd}{set\+\_\+tamanho} (A\+R\+R\+AY arr, int tamanho)
+\begin{DoxyCompactList}\small\item\em Alterar o tamanho da struct. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a4db26fd13ba911442b4c2a54835d236e}{alloc\+\_\+long} (A\+R\+R\+AY arr, int tamanho)
+\begin{DoxyCompactList}\small\item\em Aloca mais espaço para a struct. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a8c3aebf13d18e75955da664d63bfc09c}{minimo} (int $\ast$arr, int N)
+\begin{DoxyCompactList}\small\item\em Devolve o minimo da função. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_af793d758df4c094d3026f2382a98c557}{insere} (A\+R\+R\+AY v, int x, long id)
+\begin{DoxyCompactList}\small\item\em Insere um valor e um id á struct arraygeral. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a932096849221797df54240250a4fd423}{insere\+\_\+\+D\+A\+TA} (A\+R\+R\+A\+YD v, D\+A\+TA x, long id)
+\begin{DoxyCompactList}\small\item\em Insere uma Data e um id á struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a7376d295073ef7578f5ae2932b41f59f}{verifica\+\_\+inserido\+\_\+long} (long $\ast$arr, int N, long id)
+\begin{DoxyCompactList}\small\item\em Verifica se um id esta no array. \end{DoxyCompactList}\item 
+gboolean \hyperlink{structgen_8c_a3cafa2624aaa8127e413b9805c0a1816}{run\+Users} (gpointer key, gpointer value, gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Função usada no g\+\_\+tree\+\_\+foreach Insere na struct arraygeral o id e os numero de posts de um user. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_afd3ee512fc3b0942f966130836ccbaa2}{verifica\+\_\+inserido\+\_\+\+D\+A\+TA} (D\+A\+TA $\ast$arr, int N, D\+A\+TA id)
+\begin{DoxyCompactList}\small\item\em Verifica se uma D\+A\+TA esta no array. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a999c106ff8f454c244aa9b299953ea81}{swapl} (long $\ast$arr, int max, int first)
+\begin{DoxyCompactList}\small\item\em Swap de um array de longs. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_ab7fbfbccf4eef60e2d71d5620fbe731a}{swapi} (int $\ast$arr, int max, int first)
+\begin{DoxyCompactList}\small\item\em Swap de um array de inteiros. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a23e53f997904a3916b13027b11b0ad3f}{get\+N\+M\+AX} (A\+R\+R\+AY v, int N, int first)
+\begin{DoxyCompactList}\small\item\em Ordena o arraygeral. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_ac7824a6695a342084bcf72da2b9b0811}{inseresimples} (A\+R\+R\+AY v, int x, long id)
+\begin{DoxyCompactList}\small\item\em Insere no na struct arraygeral. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a88b556c8800b62ba60e14a618f4cf8ab}{incforquery7} (A\+R\+R\+AY v, long id)
+\begin{DoxyCompactList}\small\item\em Incrementa o numero de vezes que o id é usado. \end{DoxyCompactList}\item 
+A\+U\+X\+T\+A\+GS \hyperlink{structgen_8c_adb1dc216fa1d55391d5ba255339e9a57}{creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+GS} (long id, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Cria uma struct do tipo arraygeral para tags. \end{DoxyCompactList}\item 
+long \hyperlink{structgen_8c_a1b540dd4b3df8bd0702d22c514e46085}{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id} (A\+U\+X\+T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Devolve o id da tag. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_ac983b71a4873bb6d5ece261bd39ac542}{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count} (A\+U\+X\+T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Devolve quantas vezes a tag foi usada. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{structgen_8c_a98611c325909784822b9aa4f9a4f4c99}{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name} (A\+U\+X\+T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Devolve o nome da tag. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a2dc9aa5bbfb981c55e27c62fcc67da1b}{inc\+\_\+count} (A\+U\+X\+T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em incrementa o numero de vezes que a tag foi usada \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_afd1ec2509e2ed6ff1a75e39e3c1dd3ad}{free\+\_\+arraygeral} (A\+R\+R\+AY v)
+\begin{DoxyCompactList}\small\item\em Dá free á struct arraygeral. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a3d3dc9fa53c0511d01a76315c50e0259}{free\+\_\+arraygeral\+D\+A\+TA} (A\+R\+R\+A\+YD v)
+\begin{DoxyCompactList}\small\item\em Dá free á struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. \end{DoxyCompactList}\item 
+struct \hyperlink{structStack}{Stack} $\ast$ \hyperlink{structgen_8c_ac0bb616f07bffb005a8d807a5d66b6e2}{create\+Stack} (int capacity)
+\begin{DoxyCompactList}\small\item\em Cria uma stack. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a36c0759485b602be12aaf80a11f9e062}{is\+Full} (struct \hyperlink{structStack}{Stack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Verifica se a stack ta cheia. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a73cf861402a437b7f475d5397a4edfc0}{is\+Empty} (struct \hyperlink{structStack}{Stack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Verifica se a stack ta vazia. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_afba1c88ac1b8e804def8075067500f63}{push} (struct \hyperlink{structStack}{Stack} $\ast$stack, int item)
+\begin{DoxyCompactList}\small\item\em Coloca na stack. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a6f250947aa2732ec56d43d47ec5900a9}{pop} (struct \hyperlink{structStack}{Stack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Retira da stack. \end{DoxyCompactList}\item 
+int \hyperlink{structgen_8c_a9f3db46582f9703f54c6e778ea083144}{contido} (struct \hyperlink{structStack}{Stack} $\ast$stack, int x)
+\begin{DoxyCompactList}\small\item\em verifica se um valor está na stack \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a03af9a947801a5a13a44db1af0579460}{free\+\_\+stack} (struct \hyperlink{structStack}{Stack} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocada na stack. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a64b8e7f223fafa7efa827ba2fdb3674c}{get\+N\+Comuns} (A\+R\+R\+A\+YD array1, A\+R\+R\+A\+YD array2, int N, L\+O\+N\+G\+\_\+list list)
+\begin{DoxyCompactList}\small\item\em Coloca no L\+O\+N\+G\+\_\+list N perguntas em que participaram dois users. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a6340fa48b4f2ab84a8060342d8b3b445}{merge} (int arri\mbox{[}$\,$\mbox{]}, long arrl\mbox{[}$\,$\mbox{]}, int l, int m, int r)
+\begin{DoxyCompactList}\small\item\em Ordena a dois arrays. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_abf757d0b9413c8877b7b0e4bb6103759}{merge\+Sort} (A\+R\+R\+AY arr, int l, int r)
+\begin{DoxyCompactList}\small\item\em Ordena a struct arraygeral. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_afbfb3059559862b24c6dd4696aa464a9}{merge\+Data} (D\+A\+TA arrD\mbox{[}$\,$\mbox{]}, long arrl\mbox{[}$\,$\mbox{]}, int l, int m, int r)
+\begin{DoxyCompactList}\small\item\em Ordena a dois arrays. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_a3f9088d20de0445d7849d89181975f28}{merge\+Sort\+D\+A\+TA} (A\+R\+R\+A\+YD arr, int l, int r)
+\begin{DoxyCompactList}\small\item\em Ordena a struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{structgen_8c_aec2c801ed0620378f1f7f2cceee8df9f}{concat} (const char $\ast$path, const char $\ast$ficheiro)
+\begin{DoxyCompactList}\small\item\em Concatena o caminho dos ficheiros com os ficheiros. \end{DoxyCompactList}\item 
+void \hyperlink{structgen_8c_ab1a037b9946a5c0798e179cc710787e6}{free\+\_\+\+A\+U\+X\+T\+AG} (A\+U\+X\+T\+A\+GS t)
+\begin{DoxyCompactList}\small\item\em Dá free á struct \hyperlink{structauxTags}{aux\+Tags}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Guarda a informação necesaria em arrays que envolva sempre duas variaveis(uma int e outra long) como por exemplo id de users e o numero de posts deles. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{structgen.\+c@{structgen.\+c}!alloc\+\_\+long@{alloc\+\_\+long}}
+\index{alloc\+\_\+long@{alloc\+\_\+long}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{alloc\+\_\+long(\+A\+R\+R\+A\+Y arr, int tamanho)}{alloc_long(ARRAY arr, int tamanho)}}]{\setlength{\rightskip}{0pt plus 5cm}void alloc\+\_\+long (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr, }
+\item[{int}]{tamanho}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a4db26fd13ba911442b4c2a54835d236e}{}\label{structgen_8c_a4db26fd13ba911442b4c2a54835d236e}
+
+
+Aloca mais espaço para a struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em tamanho} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!concat@{concat}}
+\index{concat@{concat}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{concat(const char $\ast$path, const char $\ast$ficheiro)}{concat(const char *path, const char *ficheiro)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ concat (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{const char $\ast$}]{ficheiro}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_aec2c801ed0620378f1f7f2cceee8df9f}{}\label{structgen_8c_aec2c801ed0620378f1f7f2cceee8df9f}
+
+
+Concatena o caminho dos ficheiros com os ficheiros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em caminho} & \\
+\hline
+{\em ficheiro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+caminho para o ficheiro 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!contido@{contido}}
+\index{contido@{contido}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{contido(struct Stack $\ast$stack, int x)}{contido(struct Stack *stack, int x)}}]{\setlength{\rightskip}{0pt plus 5cm}int contido (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Stack} $\ast$}]{stack, }
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a9f3db46582f9703f54c6e778ea083144}{}\label{structgen_8c_a9f3db46582f9703f54c6e778ea083144}
+
+
+verifica se um valor está na stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structStack}{Stack}} & \\
+\hline
+{\em valor} & a procurar na stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 ou 1 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!creat\+\_\+\+A\+R\+R\+AY@{creat\+\_\+\+A\+R\+R\+AY}}
+\index{creat\+\_\+\+A\+R\+R\+AY@{creat\+\_\+\+A\+R\+R\+AY}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{creat\+\_\+\+A\+R\+R\+A\+Y(int tamanho)}{creat_ARRAY(int tamanho)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+R\+R\+AY creat\+\_\+\+A\+R\+R\+AY (
+\begin{DoxyParamCaption}
+\item[{int}]{tamanho}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a2c8265cdbeb0e8614c65a1d5f9a4be93}{}\label{structgen_8c_a2c8265cdbeb0e8614c65a1d5f9a4be93}
+
+
+Cria a struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tamanho} & da struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para arraygeral 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+GS@{creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+GS}}
+\index{creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+GS@{creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+GS}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+G\+S(long id, char $\ast$name)}{creat_ARRAY_TAGS(long id, char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+U\+X\+T\+A\+GS creat\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+A\+GS (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_adb1dc216fa1d55391d5ba255339e9a57}{}\label{structgen_8c_adb1dc216fa1d55391d5ba255339e9a57}
+
+
+Cria uma struct do tipo arraygeral para tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em nome} & da tag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+apontador para a struct 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!creat\+\_\+\+A\+R\+R\+A\+YD@{creat\+\_\+\+A\+R\+R\+A\+YD}}
+\index{creat\+\_\+\+A\+R\+R\+A\+YD@{creat\+\_\+\+A\+R\+R\+A\+YD}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{creat\+\_\+\+A\+R\+R\+A\+Y\+D(int tamanho)}{creat_ARRAYD(int tamanho)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+R\+R\+A\+YD creat\+\_\+\+A\+R\+R\+A\+YD (
+\begin{DoxyParamCaption}
+\item[{int}]{tamanho}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a3be3127f5d0c30beec5c82acbf1ff708}{}\label{structgen_8c_a3be3127f5d0c30beec5c82acbf1ff708}
+
+
+Cria a struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tamanho} & da struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA} 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!create\+Stack@{create\+Stack}}
+\index{create\+Stack@{create\+Stack}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{create\+Stack(int capacity)}{createStack(int capacity)}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Stack}$\ast$ create\+Stack (
+\begin{DoxyParamCaption}
+\item[{int}]{capacity}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ac0bb616f07bffb005a8d807a5d66b6e2}{}\label{structgen_8c_ac0bb616f07bffb005a8d807a5d66b6e2}
+
+
+Cria uma stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacidade} & da stack \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!free\+\_\+arraygeral@{free\+\_\+arraygeral}}
+\index{free\+\_\+arraygeral@{free\+\_\+arraygeral}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+arraygeral(\+A\+R\+R\+A\+Y v)}{free_arraygeral(ARRAY v)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+arraygeral (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_afd1ec2509e2ed6ff1a75e39e3c1dd3ad}{}\label{structgen_8c_afd1ec2509e2ed6ff1a75e39e3c1dd3ad}
+
+
+Dá free á struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!free\+\_\+arraygeral\+D\+A\+TA@{free\+\_\+arraygeral\+D\+A\+TA}}
+\index{free\+\_\+arraygeral\+D\+A\+TA@{free\+\_\+arraygeral\+D\+A\+TA}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+arraygeral\+D\+A\+T\+A(\+A\+R\+R\+A\+Y\+D v)}{free_arraygeralDATA(ARRAYD v)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+arraygeral\+D\+A\+TA (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+A\+YD}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a3d3dc9fa53c0511d01a76315c50e0259}{}\label{structgen_8c_a3d3dc9fa53c0511d01a76315c50e0259}
+
+
+Dá free á struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+A\+YD} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!free\+\_\+\+A\+U\+X\+T\+AG@{free\+\_\+\+A\+U\+X\+T\+AG}}
+\index{free\+\_\+\+A\+U\+X\+T\+AG@{free\+\_\+\+A\+U\+X\+T\+AG}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+\+A\+U\+X\+T\+A\+G(\+A\+U\+X\+T\+A\+G\+S t)}{free_AUXTAG(AUXTAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+\+A\+U\+X\+T\+AG (
+\begin{DoxyParamCaption}
+\item[{A\+U\+X\+T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ab1a037b9946a5c0798e179cc710787e6}{}\label{structgen_8c_ab1a037b9946a5c0798e179cc710787e6}
+
+
+Dá free á struct \hyperlink{structauxTags}{aux\+Tags}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+U\+X\+T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!free\+\_\+stack@{free\+\_\+stack}}
+\index{free\+\_\+stack@{free\+\_\+stack}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+stack(struct Stack $\ast$stack)}{free_stack(struct Stack *stack)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+stack (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Stack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a03af9a947801a5a13a44db1af0579460}{}\label{structgen_8c_a03af9a947801a5a13a44db1af0579460}
+
+
+Liberta a memoria alocada na stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structStack}{Stack}} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+array@{get\+\_\+array}}
+\index{get\+\_\+array@{get\+\_\+array}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+array(\+A\+R\+R\+A\+Y arr)}{get_array(ARRAY arr)}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ get\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a478d53251a7224d6ea96b2c1ae2fdaa8}{}\label{structgen_8c_a478d53251a7224d6ea96b2c1ae2fdaa8}
+
+
+Devolve o primeiro array da struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para a primeira posição do array 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+arrayP@{get\+\_\+arrayP}}
+\index{get\+\_\+arrayP@{get\+\_\+arrayP}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+array\+P(\+A\+R\+R\+A\+Y arr)}{get_arrayP(ARRAY arr)}}]{\setlength{\rightskip}{0pt plus 5cm}long$\ast$ get\+\_\+arrayP (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a1462fb436d6bf7934c30abd6c499347d}{}\label{structgen_8c_a1462fb436d6bf7934c30abd6c499347d}
+
+
+Devolve o segundo array da struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para a primeira posição do array 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count@{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count}}
+\index{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count@{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count(\+A\+U\+X\+T\+A\+G\+S t)}{get_AUXTAGS_count(AUXTAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{A\+U\+X\+T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ac983b71a4873bb6d5ece261bd39ac542}{}\label{structgen_8c_ac983b71a4873bb6d5ece261bd39ac542}
+
+
+Devolve quantas vezes a tag foi usada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+U\+X\+T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+quantas vezes a tag foi usada 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id@{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id}}
+\index{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id@{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id(\+A\+U\+X\+T\+A\+G\+S t)}{get_AUXTAGS_id(AUXTAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{A\+U\+X\+T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a1b540dd4b3df8bd0702d22c514e46085}{}\label{structgen_8c_a1b540dd4b3df8bd0702d22c514e46085}
+
+
+Devolve o id da tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+U\+X\+T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id da tag 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name@{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name}}
+\index{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name@{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name(\+A\+U\+X\+T\+A\+G\+S t)}{get_AUXTAGS_name(AUXTAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+\+A\+U\+X\+T\+A\+G\+S\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{A\+U\+X\+T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a98611c325909784822b9aa4f9a4f4c99}{}\label{structgen_8c_a98611c325909784822b9aa4f9a4f4c99}
+
+
+Devolve o nome da tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+U\+X\+T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nome da tag 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+tamanho@{get\+\_\+tamanho}}
+\index{get\+\_\+tamanho@{get\+\_\+tamanho}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+tamanho(\+A\+R\+R\+A\+Y arr)}{get_tamanho(ARRAY arr)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+tamanho (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a71cb7d3beaccc5e621b12f78c2c72ac5}{}\label{structgen_8c_a71cb7d3beaccc5e621b12f78c2c72ac5}
+
+
+Devolve o tamanho da struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tamanho 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+tamanhoD@{get\+\_\+tamanhoD}}
+\index{get\+\_\+tamanhoD@{get\+\_\+tamanhoD}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+tamanho\+D(\+A\+R\+R\+A\+Y\+D arr)}{get_tamanhoD(ARRAYD arr)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+tamanhoD (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+A\+YD}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_af8025c5ae2ef70c6888638ef05243551}{}\label{structgen_8c_af8025c5ae2ef70c6888638ef05243551}
+
+
+Devolve o tamanho da struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+A\+YD} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tamanho 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+used@{get\+\_\+used}}
+\index{get\+\_\+used@{get\+\_\+used}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+used(\+A\+R\+R\+A\+Y arr)}{get_used(ARRAY arr)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+used (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ab7d961cd9f4a66bb096d50037f1a80d5}{}\label{structgen_8c_ab7d961cd9f4a66bb096d50037f1a80d5}
+
+
+Devolve o valor do que esta a ser usado na struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Used 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+\_\+usedD@{get\+\_\+usedD}}
+\index{get\+\_\+usedD@{get\+\_\+usedD}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+used\+D(\+A\+R\+R\+A\+Y\+D arr)}{get_usedD(ARRAYD arr)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+usedD (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+A\+YD}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a0d838cc4e505fac3c2d967b36a463764}{}\label{structgen_8c_a0d838cc4e505fac3c2d967b36a463764}
+
+
+Devolve o valor do que esta a ser usado na struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+A\+YD} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Used 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!get\+N\+Comuns@{get\+N\+Comuns}}
+\index{get\+N\+Comuns@{get\+N\+Comuns}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+N\+Comuns(\+A\+R\+R\+A\+Y\+D array1, A\+R\+R\+A\+Y\+D array2, int N, L\+O\+N\+G\+\_\+list list)}{getNComuns(ARRAYD array1, ARRAYD array2, int N, LONG_list list)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+N\+Comuns (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+A\+YD}]{array1, }
+\item[{A\+R\+R\+A\+YD}]{array2, }
+\item[{int}]{N, }
+\item[{L\+O\+N\+G\+\_\+list}]{list}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a64b8e7f223fafa7efa827ba2fdb3674c}{}\label{structgen_8c_a64b8e7f223fafa7efa827ba2fdb3674c}
+
+
+Coloca no L\+O\+N\+G\+\_\+list N perguntas em que participaram dois users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Struct} & \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA} do user1 \\
+\hline
+{\em Struct} & \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA} do user2 \\
+\hline
+{\em N} & passado como argumento á struct both participated \\
+\hline
+{\em L\+O\+N\+G\+\_\+list} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!get\+N\+M\+AX@{get\+N\+M\+AX}}
+\index{get\+N\+M\+AX@{get\+N\+M\+AX}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{get\+N\+M\+A\+X(\+A\+R\+R\+A\+Y v, int N, int first)}{getNMAX(ARRAY v, int N, int first)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+N\+M\+AX (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{v, }
+\item[{int}]{N, }
+\item[{int}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a23e53f997904a3916b13027b11b0ad3f}{}\label{structgen_8c_a23e53f997904a3916b13027b11b0ad3f}
+
+
+Ordena o arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em numero} & de indices do array usados \\
+\hline
+{\em posição} & do array \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!inc\+\_\+count@{inc\+\_\+count}}
+\index{inc\+\_\+count@{inc\+\_\+count}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{inc\+\_\+count(\+A\+U\+X\+T\+A\+G\+S t)}{inc_count(AUXTAGS t)}}]{\setlength{\rightskip}{0pt plus 5cm}void inc\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{A\+U\+X\+T\+A\+GS}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a2dc9aa5bbfb981c55e27c62fcc67da1b}{}\label{structgen_8c_a2dc9aa5bbfb981c55e27c62fcc67da1b}
+
+
+incrementa o numero de vezes que a tag foi usada 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+U\+X\+T\+A\+GS} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!incforquery7@{incforquery7}}
+\index{incforquery7@{incforquery7}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{incforquery7(\+A\+R\+R\+A\+Y v, long id)}{incforquery7(ARRAY v, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}void incforquery7 (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{v, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a88b556c8800b62ba60e14a618f4cf8ab}{}\label{structgen_8c_a88b556c8800b62ba60e14a618f4cf8ab}
+
+
+Incrementa o numero de vezes que o id é usado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!insere@{insere}}
+\index{insere@{insere}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{insere(\+A\+R\+R\+A\+Y v, int x, long id)}{insere(ARRAY v, int x, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}void insere (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{v, }
+\item[{int}]{x, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_af793d758df4c094d3026f2382a98c557}{}\label{structgen_8c_af793d758df4c094d3026f2382a98c557}
+
+
+Insere um valor e um id á struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em valor} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!insere\+\_\+\+D\+A\+TA@{insere\+\_\+\+D\+A\+TA}}
+\index{insere\+\_\+\+D\+A\+TA@{insere\+\_\+\+D\+A\+TA}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{insere\+\_\+\+D\+A\+T\+A(\+A\+R\+R\+A\+Y\+D v, D\+A\+T\+A x, long id)}{insere_DATA(ARRAYD v, DATA x, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}void insere\+\_\+\+D\+A\+TA (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+A\+YD}]{v, }
+\item[{D\+A\+TA}]{x, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a932096849221797df54240250a4fd423}{}\label{structgen_8c_a932096849221797df54240250a4fd423}
+
+
+Insere uma Data e um id á struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em D\+A\+TA} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!inseresimples@{inseresimples}}
+\index{inseresimples@{inseresimples}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{inseresimples(\+A\+R\+R\+A\+Y v, int x, long id)}{inseresimples(ARRAY v, int x, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}void inseresimples (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{v, }
+\item[{int}]{x, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ac7824a6695a342084bcf72da2b9b0811}{}\label{structgen_8c_ac7824a6695a342084bcf72da2b9b0811}
+
+
+Insere no na struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em valor} & a inserir \\
+\hline
+{\em valor} & a inserir \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{is\+Empty(struct Stack $\ast$stack)}{isEmpty(struct Stack *stack)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Empty (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Stack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a73cf861402a437b7f475d5397a4edfc0}{}\label{structgen_8c_a73cf861402a437b7f475d5397a4edfc0}
+
+
+Verifica se a stack ta vazia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structStack}{Stack}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 ou 1 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!is\+Full@{is\+Full}}
+\index{is\+Full@{is\+Full}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{is\+Full(struct Stack $\ast$stack)}{isFull(struct Stack *stack)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Full (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Stack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a36c0759485b602be12aaf80a11f9e062}{}\label{structgen_8c_a36c0759485b602be12aaf80a11f9e062}
+
+
+Verifica se a stack ta cheia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structStack}{Stack}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 ou 1 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!merge@{merge}}
+\index{merge@{merge}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{merge(int arri[], long arrl[], int l, int m, int r)}{merge(int arri[], long arrl[], int l, int m, int r)}}]{\setlength{\rightskip}{0pt plus 5cm}void merge (
+\begin{DoxyParamCaption}
+\item[{int}]{arri\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{arrl\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{l, }
+\item[{int}]{m, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a6340fa48b4f2ab84a8060342d8b3b445}{}\label{structgen_8c_a6340fa48b4f2ab84a8060342d8b3b445}
+
+
+Ordena a dois arrays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & de int \\
+\hline
+{\em array} & de long \\
+\hline
+{\em indice} & do array \\
+\hline
+{\em indice} & do array \\
+\hline
+{\em indice} & do array \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!merge\+Data@{merge\+Data}}
+\index{merge\+Data@{merge\+Data}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{merge\+Data(\+D\+A\+T\+A arrD[], long arrl[], int l, int m, int r)}{mergeData(DATA arrD[], long arrl[], int l, int m, int r)}}]{\setlength{\rightskip}{0pt plus 5cm}void merge\+Data (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{arrD\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{arrl\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{l, }
+\item[{int}]{m, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_afbfb3059559862b24c6dd4696aa464a9}{}\label{structgen_8c_afbfb3059559862b24c6dd4696aa464a9}
+
+
+Ordena a dois arrays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & de int \\
+\hline
+{\em array} & de D\+A\+TA \\
+\hline
+{\em indice} & do array \\
+\hline
+{\em indice} & do array \\
+\hline
+{\em indice} & do array \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!merge\+Sort@{merge\+Sort}}
+\index{merge\+Sort@{merge\+Sort}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{merge\+Sort(\+A\+R\+R\+A\+Y arr, int l, int r)}{mergeSort(ARRAY arr, int l, int r)}}]{\setlength{\rightskip}{0pt plus 5cm}void merge\+Sort (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr, }
+\item[{int}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_abf757d0b9413c8877b7b0e4bb6103759}{}\label{structgen_8c_abf757d0b9413c8877b7b0e4bb6103759}
+
+
+Ordena a struct arraygeral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indice} & do array \\
+\hline
+{\em indice} & do array \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!merge\+Sort\+D\+A\+TA@{merge\+Sort\+D\+A\+TA}}
+\index{merge\+Sort\+D\+A\+TA@{merge\+Sort\+D\+A\+TA}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{merge\+Sort\+D\+A\+T\+A(\+A\+R\+R\+A\+Y\+D arr, int l, int r)}{mergeSortDATA(ARRAYD arr, int l, int r)}}]{\setlength{\rightskip}{0pt plus 5cm}void merge\+Sort\+D\+A\+TA (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+A\+YD}]{arr, }
+\item[{int}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a3f9088d20de0445d7849d89181975f28}{}\label{structgen_8c_a3f9088d20de0445d7849d89181975f28}
+
+
+Ordena a struct \hyperlink{structarraygeralDATA}{arraygeral\+D\+A\+TA}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indice} & do array \\
+\hline
+{\em indice} & do array \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!minimo@{minimo}}
+\index{minimo@{minimo}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{minimo(int $\ast$arr, int N)}{minimo(int *arr, int N)}}]{\setlength{\rightskip}{0pt plus 5cm}int minimo (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a8c3aebf13d18e75955da664d63bfc09c}{}\label{structgen_8c_a8c3aebf13d18e75955da664d63bfc09c}
+
+
+Devolve o minimo da função. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & de inteiros \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+minimo 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!pop@{pop}}
+\index{pop@{pop}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{pop(struct Stack $\ast$stack)}{pop(struct Stack *stack)}}]{\setlength{\rightskip}{0pt plus 5cm}int pop (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Stack} $\ast$}]{stack}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a6f250947aa2732ec56d43d47ec5900a9}{}\label{structgen_8c_a6f250947aa2732ec56d43d47ec5900a9}
+
+
+Retira da stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structStack}{Stack}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor da stack 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!push@{push}}
+\index{push@{push}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{push(struct Stack $\ast$stack, int item)}{push(struct Stack *stack, int item)}}]{\setlength{\rightskip}{0pt plus 5cm}void push (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Stack} $\ast$}]{stack, }
+\item[{int}]{item}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_afba1c88ac1b8e804def8075067500f63}{}\label{structgen_8c_afba1c88ac1b8e804def8075067500f63}
+
+
+Coloca na stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structStack}{Stack}} & \\
+\hline
+{\em valor} & a colocar na stack \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!run\+Users@{run\+Users}}
+\index{run\+Users@{run\+Users}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{run\+Users(gpointer key, gpointer value, gpointer data)}{runUsers(gpointer key, gpointer value, gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}gboolean run\+Users (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{key, }
+\item[{gpointer}]{value, }
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a3cafa2624aaa8127e413b9805c0a1816}{}\label{structgen_8c_a3cafa2624aaa8127e413b9805c0a1816}
+
+
+Função usada no g\+\_\+tree\+\_\+foreach Insere na struct arraygeral o id e os numero de posts de um user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em nodo} & da Gtree de users \\
+\hline
+{\em A\+R\+R\+AY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False para iterar a Gtree até ao fim 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!set\+\_\+tamanho@{set\+\_\+tamanho}}
+\index{set\+\_\+tamanho@{set\+\_\+tamanho}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+tamanho(\+A\+R\+R\+A\+Y arr, int tamanho)}{set_tamanho(ARRAY arr, int tamanho)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+tamanho (
+\begin{DoxyParamCaption}
+\item[{A\+R\+R\+AY}]{arr, }
+\item[{int}]{tamanho}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ac4087247914d041708240d4b2d8a74cd}{}\label{structgen_8c_ac4087247914d041708240d4b2d8a74cd}
+
+
+Alterar o tamanho da struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em tamanho} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!swapi@{swapi}}
+\index{swapi@{swapi}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{swapi(int $\ast$arr, int max, int first)}{swapi(int *arr, int max, int first)}}]{\setlength{\rightskip}{0pt plus 5cm}void swapi (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{arr, }
+\item[{int}]{max, }
+\item[{int}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_ab7fbfbccf4eef60e2d71d5620fbe731a}{}\label{structgen_8c_ab7fbfbccf4eef60e2d71d5620fbe731a}
+
+
+Swap de um array de inteiros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & de inteiros \\
+\hline
+{\em indice1} & \\
+\hline
+{\em indice2} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!swapl@{swapl}}
+\index{swapl@{swapl}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{swapl(long $\ast$arr, int max, int first)}{swapl(long *arr, int max, int first)}}]{\setlength{\rightskip}{0pt plus 5cm}void swapl (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{arr, }
+\item[{int}]{max, }
+\item[{int}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a999c106ff8f454c244aa9b299953ea81}{}\label{structgen_8c_a999c106ff8f454c244aa9b299953ea81}
+
+
+Swap de um array de longs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & de longs \\
+\hline
+{\em indice1} & \\
+\hline
+{\em indice2} & \\
+\hline
+\end{DoxyParams}
+\index{structgen.\+c@{structgen.\+c}!verifica\+\_\+inserido\+\_\+\+D\+A\+TA@{verifica\+\_\+inserido\+\_\+\+D\+A\+TA}}
+\index{verifica\+\_\+inserido\+\_\+\+D\+A\+TA@{verifica\+\_\+inserido\+\_\+\+D\+A\+TA}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{verifica\+\_\+inserido\+\_\+\+D\+A\+T\+A(\+D\+A\+T\+A $\ast$arr, int N, D\+A\+T\+A id)}{verifica_inserido_DATA(DATA *arr, int N, DATA id)}}]{\setlength{\rightskip}{0pt plus 5cm}int verifica\+\_\+inserido\+\_\+\+D\+A\+TA (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA $\ast$}]{arr, }
+\item[{int}]{N, }
+\item[{D\+A\+TA}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_afd3ee512fc3b0942f966130836ccbaa2}{}\label{structgen_8c_afd3ee512fc3b0942f966130836ccbaa2}
+
+
+Verifica se uma D\+A\+TA esta no array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em numero} & de indices do array usados \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 ou 0 
+\end{DoxyReturn}
+\index{structgen.\+c@{structgen.\+c}!verifica\+\_\+inserido\+\_\+long@{verifica\+\_\+inserido\+\_\+long}}
+\index{verifica\+\_\+inserido\+\_\+long@{verifica\+\_\+inserido\+\_\+long}!structgen.\+c@{structgen.\+c}}
+\subsubsection[{\texorpdfstring{verifica\+\_\+inserido\+\_\+long(long $\ast$arr, int N, long id)}{verifica_inserido_long(long *arr, int N, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}int verifica\+\_\+inserido\+\_\+long (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{arr, }
+\item[{int}]{N, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{structgen_8c_a7376d295073ef7578f5ae2932b41f59f}{}\label{structgen_8c_a7376d295073ef7578f5ae2932b41f59f}
+
+
+Verifica se um id esta no array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+R\+R\+AY} & \\
+\hline
+{\em numero} & de indices do array usados \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 ou 0 
+\end{DoxyReturn}

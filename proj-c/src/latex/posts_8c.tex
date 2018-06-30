@@ -1,0 +1,373 @@
+\hypertarget{posts_8c}{}\section{posts.\+c File Reference}
+\label{posts_8c}\index{posts.\+c@{posts.\+c}}
+
+
+Struct que guarda um post e toda a sua informacao.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}posts.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}assert.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tag\+\_\+ligada.\+h\char`\"{}}\\*
+Include dependency graph for posts.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpost}{post}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Post \hyperlink{posts_8c_a9fd3a49b87a1f9e6243f9111c5a382ad}{create\+Post} (long id, char $\ast$title, long owner\+Id, Owner o, short type\+Id, long parent\+Id, D\+A\+TA d, Tags t, int score, int coment\+Count, int answer\+Count)
+\item 
+long \hyperlink{posts_8c_a2131a9ae6d5abfd7648bb88facd15fb1}{get\+\_\+id} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o id do Post. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{posts_8c_a4e46501ec6088052251d7dc42fcde2b5}{get\+\_\+title} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o titulo do Post. \end{DoxyCompactList}\item 
+long \hyperlink{posts_8c_a9602bb518cc675d44c5ce6c2cdeaaba8}{get\+\_\+owner\+Id} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o id do Owner do Post. \end{DoxyCompactList}\item 
+Owner \hyperlink{posts_8c_ab0a0aaf49a724fa0d7431d90367bada1}{get\+\_\+autor} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o nome do autor do Post. \end{DoxyCompactList}\item 
+short \hyperlink{posts_8c_aad912b6485841896f0d396a9a4e816a2}{get\+\_\+type\+Id} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o tipo de Post que é,se é pergunta ou resposta. \end{DoxyCompactList}\item 
+long \hyperlink{posts_8c_a4ea5354d8e741fab1fbf7ff7040d4c24}{get\+\_\+parent\+Id} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o id do pai do Post. \end{DoxyCompactList}\item 
+D\+A\+TA \hyperlink{posts_8c_ac674813eed7e327aad392f37e7e32baf}{get\+\_\+\+Creation\+Date} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura a data de criazao do post. \end{DoxyCompactList}\item 
+Tags \hyperlink{posts_8c_a15cf0bb2680653d77e860e690b1b70fe}{get\+\_\+\+Tags} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura a lista de tags do Post, clonando para nao se perder informação. \end{DoxyCompactList}\item 
+int \hyperlink{posts_8c_a02ab1e186645abbfdfaeb91eba831586}{get\+\_\+score} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o score do post. \end{DoxyCompactList}\item 
+int \hyperlink{posts_8c_a403cbd0cd16b07a0faa393a252d58ff7}{get\+\_\+coment\+Count} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o inteiro relativo ao numero de comentarios do post. \end{DoxyCompactList}\item 
+int \hyperlink{posts_8c_a1a8fca038be659832d0512bd1d99e6dc}{get\+\_\+answer\+Count} (Post p)
+\begin{DoxyCompactList}\small\item\em Procura o numero de perguntas do post. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{posts_8c_ad0cce9222474f5e91f55bc25ab67279d}{get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post} (Post p)
+\begin{DoxyCompactList}\small\item\em Vai ao Owner e retira a string relativa ao nome do autor. \end{DoxyCompactList}\item 
+long \hyperlink{posts_8c_a644cfef0e9ba9ae5b31c7aa13dcd0564}{get\+\_\+\+I\+D\+\_\+owner\+Post} (Post p)
+\item 
+int {\bfseries get\+\_\+\+R\+E\+P\+U\+T\+A\+C\+I\+O\+N\+\_\+owner\+Post} (Post p)\hypertarget{posts_8c_a376fd597cc4bd2188f3f9d301c86b410}{}\label{posts_8c_a376fd597cc4bd2188f3f9d301c86b410}
+
+\item 
+int {\bfseries get\+\_\+\+D\+A\+T\+E\+\_\+\+D\+A\+Y\+\_\+post} (Post p)\hypertarget{posts_8c_a5a08371f40381622cf4311e3e83d38ed}{}\label{posts_8c_a5a08371f40381622cf4311e3e83d38ed}
+
+\item 
+int {\bfseries get\+\_\+\+D\+A\+T\+E\+\_\+\+M\+O\+N\+T\+H\+\_\+post} (Post p)\hypertarget{posts_8c_adb8c9ef9dcefd13824b87ffbdbe54fc9}{}\label{posts_8c_adb8c9ef9dcefd13824b87ffbdbe54fc9}
+
+\item 
+int {\bfseries get\+\_\+\+D\+A\+T\+E\+\_\+\+Y\+E\+A\+R\+\_\+post} (Post p)\hypertarget{posts_8c_a1002daa8f5ee3d6ab2b5f2010c05f6c7}{}\label{posts_8c_a1002daa8f5ee3d6ab2b5f2010c05f6c7}
+
+\item 
+void {\bfseries set\+\_\+\+Owner} (Post p, Owner o)\hypertarget{posts_8c_a1aa57dcb474e44ba3ac1d05310ae3d1d}{}\label{posts_8c_a1aa57dcb474e44ba3ac1d05310ae3d1d}
+
+\item 
+long {\bfseries getquestion\+ID} (Post p)\hypertarget{posts_8c_adeb6cae21475b464a1bacfee8700e672}{}\label{posts_8c_adeb6cae21475b464a1bacfee8700e672}
+
+\item 
+void {\bfseries free\+\_\+post} (Post p)\hypertarget{posts_8c_a76b5d1615b8cdcf583a370f49c02cb38}{}\label{posts_8c_a76b5d1615b8cdcf583a370f49c02cb38}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct que guarda um post e toda a sua informacao. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{posts.\+c@{posts.\+c}!create\+Post@{create\+Post}}
+\index{create\+Post@{create\+Post}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{create\+Post(long id, char $\ast$title, long owner\+Id, Owner o, short type\+Id, long parent\+Id, D\+A\+T\+A d, Tags t, int score, int coment\+Count, int answer\+Count)}{createPost(long id, char *title, long ownerId, Owner o, short typeId, long parentId, DATA d, Tags t, int score, int comentCount, int answerCount)}}]{\setlength{\rightskip}{0pt plus 5cm}Post create\+Post (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{char $\ast$}]{title, }
+\item[{long}]{owner\+Id, }
+\item[{Owner}]{o, }
+\item[{short}]{type\+Id, }
+\item[{long}]{parent\+Id, }
+\item[{D\+A\+TA}]{d, }
+\item[{Tags}]{t, }
+\item[{int}]{score, }
+\item[{int}]{coment\+Count, }
+\item[{int}]{answer\+Count}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a9fd3a49b87a1f9e6243f9111c5a382ad}{}\label{posts_8c_a9fd3a49b87a1f9e6243f9111c5a382ad}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id do post \\
+\hline
+{\em title} & titulo do post \\
+\hline
+{\em owner\+Id} & id do criador do post \\
+\hline
+{\em o} & informações do Owner \\
+\hline
+{\em type\+Id} & se o post é pergunta ou resposta \\
+\hline
+{\em parent\+Id} & id do pai do post \\
+\hline
+{\em d} & Data \\
+\hline
+{\em t} & tags do post \\
+\hline
+{\em score} & score do post \\
+\hline
+{\em coment\+Count} & numero de comentarios \\
+\hline
+{\em answer\+Count} & numero de respostas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+answer\+Count@{get\+\_\+answer\+Count}}
+\index{get\+\_\+answer\+Count@{get\+\_\+answer\+Count}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+answer\+Count(\+Post p)}{get_answerCount(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+answer\+Count (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a1a8fca038be659832d0512bd1d99e6dc}{}\label{posts_8c_a1a8fca038be659832d0512bd1d99e6dc}
+
+
+Procura o numero de perguntas do post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o answer\+Count do Post 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+autor@{get\+\_\+autor}}
+\index{get\+\_\+autor@{get\+\_\+autor}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+autor(\+Post p)}{get_autor(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}Owner get\+\_\+autor (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_ab0a0aaf49a724fa0d7431d90367bada1}{}\label{posts_8c_ab0a0aaf49a724fa0d7431d90367bada1}
+
+
+Procura o nome do autor do Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o autor do texto 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+coment\+Count@{get\+\_\+coment\+Count}}
+\index{get\+\_\+coment\+Count@{get\+\_\+coment\+Count}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+coment\+Count(\+Post p)}{get_comentCount(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+coment\+Count (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a403cbd0cd16b07a0faa393a252d58ff7}{}\label{posts_8c_a403cbd0cd16b07a0faa393a252d58ff7}
+
+
+Procura o inteiro relativo ao numero de comentarios do post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o coment\+Count do Post 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+\+Creation\+Date@{get\+\_\+\+Creation\+Date}}
+\index{get\+\_\+\+Creation\+Date@{get\+\_\+\+Creation\+Date}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Creation\+Date(\+Post p)}{get_CreationDate(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+A\+TA get\+\_\+\+Creation\+Date (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_ac674813eed7e327aad392f37e7e32baf}{}\label{posts_8c_ac674813eed7e327aad392f37e7e32baf}
+
+
+Procura a data de criazao do post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a creation\+Date 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+id(\+Post p)}{get_id(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a2131a9ae6d5abfd7648bb88facd15fb1}{}\label{posts_8c_a2131a9ae6d5abfd7648bb88facd15fb1}
+
+
+Procura o id do Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o id do Post 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+\+I\+D\+\_\+owner\+Post@{get\+\_\+\+I\+D\+\_\+owner\+Post}}
+\index{get\+\_\+\+I\+D\+\_\+owner\+Post@{get\+\_\+\+I\+D\+\_\+owner\+Post}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+I\+D\+\_\+owner\+Post(\+Post p)}{get_ID_ownerPost(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+\+I\+D\+\_\+owner\+Post (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a644cfef0e9ba9ae5b31c7aa13dcd0564}{}\label{posts_8c_a644cfef0e9ba9ae5b31c7aa13dcd0564}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{posts.\+c@{posts.\+c}!get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post@{get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post}}
+\index{get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post@{get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post(\+Post p)}{get_NAME_OwnerPost(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+\+N\+A\+M\+E\+\_\+\+Owner\+Post (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_ad0cce9222474f5e91f55bc25ab67279d}{}\label{posts_8c_ad0cce9222474f5e91f55bc25ab67279d}
+
+
+Vai ao Owner e retira a string relativa ao nome do autor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o nome dentro da struct Owner 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+owner\+Id@{get\+\_\+owner\+Id}}
+\index{get\+\_\+owner\+Id@{get\+\_\+owner\+Id}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+owner\+Id(\+Post p)}{get_ownerId(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+owner\+Id (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a9602bb518cc675d44c5ce6c2cdeaaba8}{}\label{posts_8c_a9602bb518cc675d44c5ce6c2cdeaaba8}
+
+
+Procura o id do Owner do Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o owner\+Id 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+parent\+Id@{get\+\_\+parent\+Id}}
+\index{get\+\_\+parent\+Id@{get\+\_\+parent\+Id}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+parent\+Id(\+Post p)}{get_parentId(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+parent\+Id (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a4ea5354d8e741fab1fbf7ff7040d4c24}{}\label{posts_8c_a4ea5354d8e741fab1fbf7ff7040d4c24}
+
+
+Procura o id do pai do Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o parent\+Id 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+score@{get\+\_\+score}}
+\index{get\+\_\+score@{get\+\_\+score}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+score(\+Post p)}{get_score(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+score (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a02ab1e186645abbfdfaeb91eba831586}{}\label{posts_8c_a02ab1e186645abbfdfaeb91eba831586}
+
+
+Procura o score do post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o score do Post 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+\+Tags@{get\+\_\+\+Tags}}
+\index{get\+\_\+\+Tags@{get\+\_\+\+Tags}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Tags(\+Post p)}{get_Tags(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}Tags get\+\_\+\+Tags (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a15cf0bb2680653d77e860e690b1b70fe}{}\label{posts_8c_a15cf0bb2680653d77e860e690b1b70fe}
+
+
+Procura a lista de tags do Post, clonando para nao se perder informação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a lista de tags do post 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+title@{get\+\_\+title}}
+\index{get\+\_\+title@{get\+\_\+title}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+title(\+Post p)}{get_title(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+title (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_a4e46501ec6088052251d7dc42fcde2b5}{}\label{posts_8c_a4e46501ec6088052251d7dc42fcde2b5}
+
+
+Procura o titulo do Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o titulo do Post 
+\end{DoxyReturn}
+\index{posts.\+c@{posts.\+c}!get\+\_\+type\+Id@{get\+\_\+type\+Id}}
+\index{get\+\_\+type\+Id@{get\+\_\+type\+Id}!posts.\+c@{posts.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+type\+Id(\+Post p)}{get_typeId(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}short get\+\_\+type\+Id (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{posts_8c_aad912b6485841896f0d396a9a4e816a2}{}\label{posts_8c_aad912b6485841896f0d396a9a4e816a2}
+
+
+Procura o tipo de Post que é,se é pergunta ou resposta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o type\+Id do Post 
+\end{DoxyReturn}

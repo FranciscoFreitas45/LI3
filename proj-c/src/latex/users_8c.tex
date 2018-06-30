@@ -1,0 +1,308 @@
+\hypertarget{users_8c}{}\section{users.\+c File Reference}
+\label{users_8c}\index{users.\+c@{users.\+c}}
+
+
+Informações relativas ao user.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}users.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}posts.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\\*
+Include dependency graph for users.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structusers}{users}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Users \hyperlink{users_8c_a42c12561840f02ef354b02ef67ea9a7b}{create\+Users} (long id, int reputation, char $\ast$name, char $\ast$bio, int numposts, Post $\ast$p)
+\begin{DoxyCompactList}\small\item\em Cria a informação relativa ao user. \end{DoxyCompactList}\item 
+void \hyperlink{users_8c_a514242727dbd2f0e199b3edbfeb8b35c}{shiftright} (Post $\ast$t, int ind, int numposts)
+\begin{DoxyCompactList}\small\item\em Faz um shift right ao array de posts. \end{DoxyCompactList}\item 
+void \hyperlink{users_8c_aa2372926b90aa4ec4ab94a5bfb97d8f5}{insere\+Post} (Post p, Users u)
+\begin{DoxyCompactList}\small\item\em Insere um post no array de Post do Users. \end{DoxyCompactList}\item 
+long \hyperlink{users_8c_ab5f697f66c7bdeb3ae9c02aa9dbacfe5}{get\+\_\+\+Uid} (Users u)
+\begin{DoxyCompactList}\small\item\em Procura o id do User. \end{DoxyCompactList}\item 
+int \hyperlink{users_8c_a04a4b1b90d010b3b8c65bff7f0682d39}{get\+\_\+\+Ureputation} (Users u)
+\begin{DoxyCompactList}\small\item\em Procura a reputação do User. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{users_8c_aeb5bde3a8b943eef1df273141467d7a2}{get\+\_\+\+Uname} (Users u)
+\begin{DoxyCompactList}\small\item\em Procura o nome do User. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{users_8c_ae7368d65f5cf6e534616a30057abab97}{get\+\_\+\+Ubio} (Users u)
+\begin{DoxyCompactList}\small\item\em Procura a bio do User. \end{DoxyCompactList}\item 
+int \hyperlink{users_8c_afc21bc8cdd4eac4f72507fab06982ccd}{get\+\_\+numpost} (Users u)
+\begin{DoxyCompactList}\small\item\em Procura a informação relativa ao numero de Post do User. \end{DoxyCompactList}\item 
+Post $\ast$ \hyperlink{users_8c_a4994888453dc3fc653762401dd3e8d47}{lista\+\_\+postsclone} (Post $\ast$p, int numposts)
+\begin{DoxyCompactList}\small\item\em Faz um clone do array de posts do User. \end{DoxyCompactList}\item 
+Post $\ast$ \hyperlink{users_8c_a0cd76904bbbd8768615f1dc88bd0fbc9}{get\+\_\+lista\+\_\+de\+\_\+posts} (Users u)
+\begin{DoxyCompactList}\small\item\em Procura a lista do array de apontadores para posts. \end{DoxyCompactList}\item 
+Users \hyperlink{users_8c_a7b58964fc0ab90c2c3a458ce5be27931}{userclone} (Users a)
+\begin{DoxyCompactList}\small\item\em Faz um clone do User que é recebido. \end{DoxyCompactList}\item 
+void \hyperlink{users_8c_a1f1d2b3f6e658cedf2b2806678766840}{freeuser} (Users g)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocada para a struct Users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Informações relativas ao user. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{users.\+c@{users.\+c}!create\+Users@{create\+Users}}
+\index{create\+Users@{create\+Users}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{create\+Users(long id, int reputation, char $\ast$name, char $\ast$bio, int numposts, Post $\ast$p)}{createUsers(long id, int reputation, char *name, char *bio, int numposts, Post *p)}}]{\setlength{\rightskip}{0pt plus 5cm}Users create\+Users (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{int}]{reputation, }
+\item[{char $\ast$}]{name, }
+\item[{char $\ast$}]{bio, }
+\item[{int}]{numposts, }
+\item[{Post $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a42c12561840f02ef354b02ef67ea9a7b}{}\label{users_8c_a42c12561840f02ef354b02ef67ea9a7b}
+
+
+Cria a informação relativa ao user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id do user \\
+\hline
+{\em reputation} & Reputação do User \\
+\hline
+{\em name} & Nome do User \\
+\hline
+{\em bio} & Short bio do User \\
+\hline
+{\em numposts} & Numero de posts \\
+\hline
+{\em p} & array de posts \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cria o Users e as suas informações 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!freeuser@{freeuser}}
+\index{freeuser@{freeuser}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{freeuser(\+Users g)}{freeuser(Users g)}}]{\setlength{\rightskip}{0pt plus 5cm}void freeuser (
+\begin{DoxyParamCaption}
+\item[{Users}]{g}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a1f1d2b3f6e658cedf2b2806678766840}{}\label{users_8c_a1f1d2b3f6e658cedf2b2806678766840}
+
+
+Liberta a memoria alocada para a struct Users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Users \\
+\hline
+\end{DoxyParams}
+\index{users.\+c@{users.\+c}!get\+\_\+lista\+\_\+de\+\_\+posts@{get\+\_\+lista\+\_\+de\+\_\+posts}}
+\index{get\+\_\+lista\+\_\+de\+\_\+posts@{get\+\_\+lista\+\_\+de\+\_\+posts}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+lista\+\_\+de\+\_\+posts(\+Users u)}{get_lista_de_posts(Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}Post$\ast$ get\+\_\+lista\+\_\+de\+\_\+posts (
+\begin{DoxyParamCaption}
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a0cd76904bbbd8768615f1dc88bd0fbc9}{}\label{users_8c_a0cd76904bbbd8768615f1dc88bd0fbc9}
+
+
+Procura a lista do array de apontadores para posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Users \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a lista do array de apontadores para posts 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!get\+\_\+numpost@{get\+\_\+numpost}}
+\index{get\+\_\+numpost@{get\+\_\+numpost}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+numpost(\+Users u)}{get_numpost(Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+numpost (
+\begin{DoxyParamCaption}
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_afc21bc8cdd4eac4f72507fab06982ccd}{}\label{users_8c_afc21bc8cdd4eac4f72507fab06982ccd}
+
+
+Procura a informação relativa ao numero de Post do User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o numposts do User 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!get\+\_\+\+Ubio@{get\+\_\+\+Ubio}}
+\index{get\+\_\+\+Ubio@{get\+\_\+\+Ubio}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Ubio(\+Users u)}{get_Ubio(Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+\+Ubio (
+\begin{DoxyParamCaption}
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_ae7368d65f5cf6e534616a30057abab97}{}\label{users_8c_ae7368d65f5cf6e534616a30057abab97}
+
+
+Procura a bio do User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a short bio do User 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!get\+\_\+\+Uid@{get\+\_\+\+Uid}}
+\index{get\+\_\+\+Uid@{get\+\_\+\+Uid}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Uid(\+Users u)}{get_Uid(Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+\+Uid (
+\begin{DoxyParamCaption}
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_ab5f697f66c7bdeb3ae9c02aa9dbacfe5}{}\label{users_8c_ab5f697f66c7bdeb3ae9c02aa9dbacfe5}
+
+
+Procura o id do User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna o id do User 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!get\+\_\+\+Uname@{get\+\_\+\+Uname}}
+\index{get\+\_\+\+Uname@{get\+\_\+\+Uname}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Uname(\+Users u)}{get_Uname(Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+\+Uname (
+\begin{DoxyParamCaption}
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_aeb5bde3a8b943eef1df273141467d7a2}{}\label{users_8c_aeb5bde3a8b943eef1df273141467d7a2}
+
+
+Procura o nome do User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o name do User 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!get\+\_\+\+Ureputation@{get\+\_\+\+Ureputation}}
+\index{get\+\_\+\+Ureputation@{get\+\_\+\+Ureputation}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Ureputation(\+Users u)}{get_Ureputation(Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+\+Ureputation (
+\begin{DoxyParamCaption}
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a04a4b1b90d010b3b8c65bff7f0682d39}{}\label{users_8c_a04a4b1b90d010b3b8c65bff7f0682d39}
+
+
+Procura a reputação do User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a reputação do User 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!insere\+Post@{insere\+Post}}
+\index{insere\+Post@{insere\+Post}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{insere\+Post(\+Post p, Users u)}{inserePost(Post p, Users u)}}]{\setlength{\rightskip}{0pt plus 5cm}void insere\+Post (
+\begin{DoxyParamCaption}
+\item[{Post}]{p, }
+\item[{Users}]{u}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_aa2372926b90aa4ec4ab94a5bfb97d8f5}{}\label{users_8c_aa2372926b90aa4ec4ab94a5bfb97d8f5}
+
+
+Insere um post no array de Post do Users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em u} & \\
+\hline
+\end{DoxyParams}
+\index{users.\+c@{users.\+c}!lista\+\_\+postsclone@{lista\+\_\+postsclone}}
+\index{lista\+\_\+postsclone@{lista\+\_\+postsclone}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{lista\+\_\+postsclone(\+Post $\ast$p, int numposts)}{lista_postsclone(Post *p, int numposts)}}]{\setlength{\rightskip}{0pt plus 5cm}Post$\ast$ lista\+\_\+postsclone (
+\begin{DoxyParamCaption}
+\item[{Post $\ast$}]{p, }
+\item[{int}]{numposts}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a4994888453dc3fc653762401dd3e8d47}{}\label{users_8c_a4994888453dc3fc653762401dd3e8d47}
+
+
+Faz um clone do array de posts do User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em numposts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o clone do array de User 
+\end{DoxyReturn}
+\index{users.\+c@{users.\+c}!shiftright@{shiftright}}
+\index{shiftright@{shiftright}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{shiftright(\+Post $\ast$t, int ind, int numposts)}{shiftright(Post *t, int ind, int numposts)}}]{\setlength{\rightskip}{0pt plus 5cm}void shiftright (
+\begin{DoxyParamCaption}
+\item[{Post $\ast$}]{t, }
+\item[{int}]{ind, }
+\item[{int}]{numposts}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a514242727dbd2f0e199b3edbfeb8b35c}{}\label{users_8c_a514242727dbd2f0e199b3edbfeb8b35c}
+
+
+Faz um shift right ao array de posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+{\em ind} & \\
+\hline
+{\em numposts} & \\
+\hline
+\end{DoxyParams}
+\index{users.\+c@{users.\+c}!userclone@{userclone}}
+\index{userclone@{userclone}!users.\+c@{users.\+c}}
+\subsubsection[{\texorpdfstring{userclone(\+Users a)}{userclone(Users a)}}]{\setlength{\rightskip}{0pt plus 5cm}Users userclone (
+\begin{DoxyParamCaption}
+\item[{Users}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{users_8c_a7b58964fc0ab90c2c3a458ce5be27931}{}\label{users_8c_a7b58964fc0ab90c2c3a458ce5be27931}
+
+
+Faz um clone do User que é recebido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Users \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um clone do User a 
+\end{DoxyReturn}

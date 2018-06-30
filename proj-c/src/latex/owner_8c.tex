@@ -1,0 +1,144 @@
+\hypertarget{owner_8c}{}\section{owner.\+c File Reference}
+\label{owner_8c}\index{owner.\+c@{owner.\+c}}
+
+
+A partir da struct Posts, guarda mos uma string com o nome do autor, o id dele e a reputacao.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}owner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+Include dependency graph for owner.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structowner}{owner}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Owner \hyperlink{owner_8c_a50ffb8d194a013b54b44beafa0df74cb}{create\+Owner} (char $\ast$name, long id, int reputation)
+\begin{DoxyCompactList}\small\item\em Cria um Owner, atualizando o nome, id e a reputacao do mesmo. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{owner_8c_addc6bebe4a407dc0042f95206ad0fbf5}{get\+\_\+\+Oname} (Owner o)
+\begin{DoxyCompactList}\small\item\em Procura o nome de um owner, a partir de um Owner. \end{DoxyCompactList}\item 
+long \hyperlink{owner_8c_abd29cf4e73b43739cc85d0023346e785}{get\+\_\+\+Oid} (Owner o)
+\begin{DoxyCompactList}\small\item\em Procura a partir de um Owner, o seu id. \end{DoxyCompactList}\item 
+int \hyperlink{owner_8c_a1fb3c5cd36c4c4609b64290daac5ac67}{get\+\_\+\+Oreputation} (Owner o)
+\begin{DoxyCompactList}\small\item\em A partir de um Owner, procura o valor da sua reputacao. \end{DoxyCompactList}\item 
+void \hyperlink{owner_8c_a1ee1a53c05589110ced3fce4d33a7aec}{free\+\_\+owner} (Owner o)
+\begin{DoxyCompactList}\small\item\em Funcao que liberta a memoria alocada para o nome do Owner e o id do Owner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A partir da struct Posts, guarda mos uma string com o nome do autor, o id dele e a reputacao. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{owner.\+c@{owner.\+c}!create\+Owner@{create\+Owner}}
+\index{create\+Owner@{create\+Owner}!owner.\+c@{owner.\+c}}
+\subsubsection[{\texorpdfstring{create\+Owner(char $\ast$name, long id, int reputation)}{createOwner(char *name, long id, int reputation)}}]{\setlength{\rightskip}{0pt plus 5cm}Owner create\+Owner (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{long}]{id, }
+\item[{int}]{reputation}
+\end{DoxyParamCaption}
+)}\hypertarget{owner_8c_a50ffb8d194a013b54b44beafa0df74cb}{}\label{owner_8c_a50ffb8d194a013b54b44beafa0df74cb}
+
+
+Cria um Owner, atualizando o nome, id e a reputacao do mesmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em id} & \\
+\hline
+{\em reputation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um Owner 
+\end{DoxyReturn}
+\index{owner.\+c@{owner.\+c}!free\+\_\+owner@{free\+\_\+owner}}
+\index{free\+\_\+owner@{free\+\_\+owner}!owner.\+c@{owner.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+owner(\+Owner o)}{free_owner(Owner o)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+owner (
+\begin{DoxyParamCaption}
+\item[{Owner}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{owner_8c_a1ee1a53c05589110ced3fce4d33a7aec}{}\label{owner_8c_a1ee1a53c05589110ced3fce4d33a7aec}
+
+
+Funcao que liberta a memoria alocada para o nome do Owner e o id do Owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Owner \\
+\hline
+\end{DoxyParams}
+\index{owner.\+c@{owner.\+c}!get\+\_\+\+Oid@{get\+\_\+\+Oid}}
+\index{get\+\_\+\+Oid@{get\+\_\+\+Oid}!owner.\+c@{owner.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Oid(\+Owner o)}{get_Oid(Owner o)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+\+Oid (
+\begin{DoxyParamCaption}
+\item[{Owner}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{owner_8c_abd29cf4e73b43739cc85d0023346e785}{}\label{owner_8c_abd29cf4e73b43739cc85d0023346e785}
+
+
+Procura a partir de um Owner, o seu id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Owner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o id do Owner 
+\end{DoxyReturn}
+\index{owner.\+c@{owner.\+c}!get\+\_\+\+Oname@{get\+\_\+\+Oname}}
+\index{get\+\_\+\+Oname@{get\+\_\+\+Oname}!owner.\+c@{owner.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Oname(\+Owner o)}{get_Oname(Owner o)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+\+Oname (
+\begin{DoxyParamCaption}
+\item[{Owner}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{owner_8c_addc6bebe4a407dc0042f95206ad0fbf5}{}\label{owner_8c_addc6bebe4a407dc0042f95206ad0fbf5}
+
+
+Procura o nome de um owner, a partir de um Owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Owner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o nome do Owner 
+\end{DoxyReturn}
+\index{owner.\+c@{owner.\+c}!get\+\_\+\+Oreputation@{get\+\_\+\+Oreputation}}
+\index{get\+\_\+\+Oreputation@{get\+\_\+\+Oreputation}!owner.\+c@{owner.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Oreputation(\+Owner o)}{get_Oreputation(Owner o)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+\+Oreputation (
+\begin{DoxyParamCaption}
+\item[{Owner}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{owner_8c_a1fb3c5cd36c4c4609b64290daac5ac67}{}\label{owner_8c_a1fb3c5cd36c4c4609b64290daac5ac67}
+
+
+A partir de um Owner, procura o valor da sua reputacao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Owner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a reputacao do Owner 
+\end{DoxyReturn}

@@ -1,0 +1,384 @@
+\hypertarget{interface_8c}{}\section{interface.\+c File Reference}
+\label{interface_8c}\index{interface.\+c@{interface.\+c}}
+
+
+Tipo contreto de dados.  
+
+
+{\ttfamily \#include \char`\"{}users.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}owner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}posts.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$date.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$glib.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}load.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}avl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}structgen.\+h\char`\"{}}\\*
+Include dependency graph for interface.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTCD__community}{T\+C\+D\+\_\+community}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+A\+D\+\_\+community \hyperlink{interface_8c_aadd031ccf1ce5bbb27994ef338ca2750}{init} ()
+\begin{DoxyCompactList}\small\item\em Inicializa a nossa struct geral do trabalho. \end{DoxyCompactList}\item 
+T\+A\+D\+\_\+community \hyperlink{interface_8c_aa6678ad7f094e6c0ce5142789734fb9f}{load} (T\+A\+D\+\_\+community com, char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Carrega a nossa struct. \end{DoxyCompactList}\item 
+S\+T\+R\+\_\+pair \hyperlink{interface_8c_ac297866fc062cda7f009927571ab55dc}{info\+\_\+from\+\_\+post} (T\+A\+D\+\_\+community com, long id)
+\begin{DoxyCompactList}\small\item\em Dado um id de um post, ve a informacao relativa ao \hyperlink{structpost}{post(titulo do post)} e nome de utilizador do autor. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+pair \hyperlink{interface_8c_a58aee481445828846cbb908c20800265}{total\+\_\+posts} (T\+A\+D\+\_\+community com, Date begin, Date end)
+\begin{DoxyCompactList}\small\item\em De acordo com o intervalo de tempo dado, calcula numero total de posts dentro da data, identificando perguntas e respostas. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_a3833b4111827095f7654ff0b1ec6a6ee}{questions\+\_\+with\+\_\+tag} (T\+A\+D\+\_\+community com, char $\ast$tag, Date begin, Date end)
+\begin{DoxyCompactList}\small\item\em De acordo com a data dada,calcula todas as perguntas que contem uma certa tag ordenando por ondem cronologica inversa. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_a4847929aa84113b38e6804acefdfd6a4}{most\+\_\+answered\+\_\+questions} (T\+A\+D\+\_\+community com, int N, Date begin, Date end)
+\begin{DoxyCompactList}\small\item\em Calcula os I\+DS das N perguntas com mais respostas, dentro de um certo intervalo de tempo. \end{DoxyCompactList}\item 
+U\+S\+ER \hyperlink{interface_8c_abbe8e56c4e4552c93a81a625ea641869}{get\+\_\+user\+\_\+info} (T\+A\+D\+\_\+community com, long id)
+\begin{DoxyCompactList}\small\item\em Com o ID de um autor, retira a informacao da short bio dele, e os I\+DS dos ultimos 10 posts efetuados por ele. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_abee0976337de52cefdc4e840c803f2f4}{most\+\_\+voted\+\_\+answers} (T\+A\+D\+\_\+community com, int N, Date begin, Date end)
+\begin{DoxyCompactList}\small\item\em Dentro de um certo intervalo de tempo devolver as N perguntas com mais votos, em ordem decrescente do numero de votos. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_aade1f77088e1f4e6806c3ee8d33a5d41}{contains\+\_\+word} (T\+A\+D\+\_\+community com, char $\ast$word, int N)
+\begin{DoxyCompactList}\small\item\em Dado uma palavra, dar os I\+DS das N perguntas que contenham a palavra dada (word) \end{DoxyCompactList}\item 
+long {\bfseries better\+\_\+answer} (T\+A\+D\+\_\+community com, long id)\hypertarget{interface_8c_af0bd178e59de59a12a227a1cc5124c58}{}\label{interface_8c_af0bd178e59de59a12a227a1cc5124c58}
+
+\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_aea6f8074566f0a5373ea67b3469fd4cc}{top\+\_\+most\+\_\+active} (T\+A\+D\+\_\+community com, int N)
+\begin{DoxyCompactList}\small\item\em Obtem os N utilizadores com mais atividade de sempre, ou seja, com maior numero de posts de sempre, sendo consideradas tanto perguntas como respostas. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_ab2069c6237b5ab6647937173d43d9bac}{both\+\_\+participated} (T\+A\+D\+\_\+community com, long id1, long id2, int N)
+\begin{DoxyCompactList}\small\item\em Dado os I\+DS de dois utilizadores, devolver as ultimas N perguntas em que ambos participaram, via pergunta ou resposta, por ordem cronologica inversa. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{interface_8c_aa048ff54eec00113e9e16d530370fcc1}{most\+\_\+used\+\_\+best\+\_\+rep} (T\+A\+D\+\_\+community com, int N, Date begin, Date end)
+\begin{DoxyCompactList}\small\item\em Dentro de um dado intervalo de tempo, devolve as N tags mais usadas pelos N utilizadores com melhor reputacao, por ordem decrescente do numero de vezes em que a tag e utilizada. \end{DoxyCompactList}\item 
+T\+A\+D\+\_\+community \hyperlink{interface_8c_ab7f080e43dc99c5cde2c66249cafa252}{clean} (T\+A\+D\+\_\+community com)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocada para a T\+A\+D\+\_\+community. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tipo contreto de dados. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{interface.\+c@{interface.\+c}!both\+\_\+participated@{both\+\_\+participated}}
+\index{both\+\_\+participated@{both\+\_\+participated}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{both\+\_\+participated(\+T\+A\+D\+\_\+community com, long id1, long id2, int N)}{both_participated(TAD_community com, long id1, long id2, int N)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list both\+\_\+participated (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{long}]{id1, }
+\item[{long}]{id2, }
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_ab2069c6237b5ab6647937173d43d9bac}{}\label{interface_8c_ab2069c6237b5ab6647937173d43d9bac}
+
+
+Dado os I\+DS de dois utilizadores, devolver as ultimas N perguntas em que ambos participaram, via pergunta ou resposta, por ordem cronologica inversa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em id1} & \\
+\hline
+{\em id2} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!clean@{clean}}
+\index{clean@{clean}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{clean(\+T\+A\+D\+\_\+community com)}{clean(TAD_community com)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+D\+\_\+community clean (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_ab7f080e43dc99c5cde2c66249cafa252}{}\label{interface_8c_ab7f080e43dc99c5cde2c66249cafa252}
+
+
+Liberta a memoria alocada para a T\+A\+D\+\_\+community. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna T\+A\+D\+\_\+community 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!contains\+\_\+word@{contains\+\_\+word}}
+\index{contains\+\_\+word@{contains\+\_\+word}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{contains\+\_\+word(\+T\+A\+D\+\_\+community com, char $\ast$word, int N)}{contains_word(TAD_community com, char *word, int N)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list contains\+\_\+word (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{char $\ast$}]{word, }
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_aade1f77088e1f4e6806c3ee8d33a5d41}{}\label{interface_8c_aade1f77088e1f4e6806c3ee8d33a5d41}
+
+
+Dado uma palavra, dar os I\+DS das N perguntas que contenham a palavra dada (word) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em word} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!get\+\_\+user\+\_\+info@{get\+\_\+user\+\_\+info}}
+\index{get\+\_\+user\+\_\+info@{get\+\_\+user\+\_\+info}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+user\+\_\+info(\+T\+A\+D\+\_\+community com, long id)}{get_user_info(TAD_community com, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+ER get\+\_\+user\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_abbe8e56c4e4552c93a81a625ea641869}{}\label{interface_8c_abbe8e56c4e4552c93a81a625ea641869}
+
+
+Com o ID de um autor, retira a informacao da short bio dele, e os I\+DS dos ultimos 10 posts efetuados por ele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um U\+S\+ER 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!info\+\_\+from\+\_\+post@{info\+\_\+from\+\_\+post}}
+\index{info\+\_\+from\+\_\+post@{info\+\_\+from\+\_\+post}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{info\+\_\+from\+\_\+post(\+T\+A\+D\+\_\+community com, long id)}{info_from_post(TAD_community com, long id)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+T\+R\+\_\+pair info\+\_\+from\+\_\+post (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_ac297866fc062cda7f009927571ab55dc}{}\label{interface_8c_ac297866fc062cda7f009927571ab55dc}
+
+
+Dado um id de um post, ve a informacao relativa ao \hyperlink{structpost}{post(titulo do post)} e nome de utilizador do autor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em id} & do post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+R\+\_\+pair 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!init@{init}}
+\index{init@{init}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+D\+\_\+community init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_aadd031ccf1ce5bbb27994ef338ca2750}{}\label{interface_8c_aadd031ccf1ce5bbb27994ef338ca2750}
+
+
+Inicializa a nossa struct geral do trabalho. 
+
+\begin{DoxyReturn}{Returns}
+T\+A\+D\+\_\+community 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!load@{load}}
+\index{load@{load}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{load(\+T\+A\+D\+\_\+community com, char $\ast$path)}{load(TAD_community com, char *path)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+D\+\_\+community load (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_aa6678ad7f094e6c0ce5142789734fb9f}{}\label{interface_8c_aa6678ad7f094e6c0ce5142789734fb9f}
+
+
+Carrega a nossa struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & Struct que sera carregada \\
+\hline
+{\em path} & Caminho para os ficheiros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+A\+D\+\_\+community 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!most\+\_\+answered\+\_\+questions@{most\+\_\+answered\+\_\+questions}}
+\index{most\+\_\+answered\+\_\+questions@{most\+\_\+answered\+\_\+questions}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{most\+\_\+answered\+\_\+questions(\+T\+A\+D\+\_\+community com, int N, Date begin, Date end)}{most_answered_questions(TAD_community com, int N, Date begin, Date end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list most\+\_\+answered\+\_\+questions (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{int}]{N, }
+\item[{Date}]{begin, }
+\item[{Date}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_a4847929aa84113b38e6804acefdfd6a4}{}\label{interface_8c_a4847929aa84113b38e6804acefdfd6a4}
+
+
+Calcula os I\+DS das N perguntas com mais respostas, dentro de um certo intervalo de tempo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em N} & \\
+\hline
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!most\+\_\+used\+\_\+best\+\_\+rep@{most\+\_\+used\+\_\+best\+\_\+rep}}
+\index{most\+\_\+used\+\_\+best\+\_\+rep@{most\+\_\+used\+\_\+best\+\_\+rep}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{most\+\_\+used\+\_\+best\+\_\+rep(\+T\+A\+D\+\_\+community com, int N, Date begin, Date end)}{most_used_best_rep(TAD_community com, int N, Date begin, Date end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list most\+\_\+used\+\_\+best\+\_\+rep (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{int}]{N, }
+\item[{Date}]{begin, }
+\item[{Date}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_aa048ff54eec00113e9e16d530370fcc1}{}\label{interface_8c_aa048ff54eec00113e9e16d530370fcc1}
+
+
+Dentro de um dado intervalo de tempo, devolve as N tags mais usadas pelos N utilizadores com melhor reputacao, por ordem decrescente do numero de vezes em que a tag e utilizada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em N} & \\
+\hline
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!most\+\_\+voted\+\_\+answers@{most\+\_\+voted\+\_\+answers}}
+\index{most\+\_\+voted\+\_\+answers@{most\+\_\+voted\+\_\+answers}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{most\+\_\+voted\+\_\+answers(\+T\+A\+D\+\_\+community com, int N, Date begin, Date end)}{most_voted_answers(TAD_community com, int N, Date begin, Date end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list most\+\_\+voted\+\_\+answers (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{int}]{N, }
+\item[{Date}]{begin, }
+\item[{Date}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_abee0976337de52cefdc4e840c803f2f4}{}\label{interface_8c_abee0976337de52cefdc4e840c803f2f4}
+
+
+Dentro de um certo intervalo de tempo devolver as N perguntas com mais votos, em ordem decrescente do numero de votos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em N} & \\
+\hline
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!questions\+\_\+with\+\_\+tag@{questions\+\_\+with\+\_\+tag}}
+\index{questions\+\_\+with\+\_\+tag@{questions\+\_\+with\+\_\+tag}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{questions\+\_\+with\+\_\+tag(\+T\+A\+D\+\_\+community com, char $\ast$tag, Date begin, Date end)}{questions_with_tag(TAD_community com, char *tag, Date begin, Date end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list questions\+\_\+with\+\_\+tag (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{char $\ast$}]{tag, }
+\item[{Date}]{begin, }
+\item[{Date}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_a3833b4111827095f7654ff0b1ec6a6ee}{}\label{interface_8c_a3833b4111827095f7654ff0b1ec6a6ee}
+
+
+De acordo com a data dada,calcula todas as perguntas que contem uma certa tag ordenando por ondem cronologica inversa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em tag} & \\
+\hline
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna uma L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!top\+\_\+most\+\_\+active@{top\+\_\+most\+\_\+active}}
+\index{top\+\_\+most\+\_\+active@{top\+\_\+most\+\_\+active}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{top\+\_\+most\+\_\+active(\+T\+A\+D\+\_\+community com, int N)}{top_most_active(TAD_community com, int N)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list top\+\_\+most\+\_\+active (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_aea6f8074566f0a5373ea67b3469fd4cc}{}\label{interface_8c_aea6f8074566f0a5373ea67b3469fd4cc}
+
+
+Obtem os N utilizadores com mais atividade de sempre, ou seja, com maior numero de posts de sempre, sendo consideradas tanto perguntas como respostas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{interface.\+c@{interface.\+c}!total\+\_\+posts@{total\+\_\+posts}}
+\index{total\+\_\+posts@{total\+\_\+posts}!interface.\+c@{interface.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+posts(\+T\+A\+D\+\_\+community com, Date begin, Date end)}{total_posts(TAD_community com, Date begin, Date end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+pair total\+\_\+posts (
+\begin{DoxyParamCaption}
+\item[{T\+A\+D\+\_\+community}]{com, }
+\item[{Date}]{begin, }
+\item[{Date}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_8c_a58aee481445828846cbb908c20800265}{}\label{interface_8c_a58aee481445828846cbb908c20800265}
+
+
+De acordo com o intervalo de tempo dado, calcula numero total de posts dentro da data, identificando perguntas e respostas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & \\
+\hline
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+pair 
+\end{DoxyReturn}

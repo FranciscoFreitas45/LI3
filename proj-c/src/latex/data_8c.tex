@@ -1,0 +1,202 @@
+\hypertarget{data_8c}{}\section{data.\+c File Reference}
+\label{data_8c}\index{data.\+c@{data.\+c}}
+
+
+Guarda a data de um post.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}date.\+h\char`\"{}}\\*
+Include dependency graph for data.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdata}{data}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+A\+TA \hyperlink{data_8c_a9531dfea0de6c41ab0510c934c0e215f}{date\+Todata} (Date a)
+\begin{DoxyCompactList}\small\item\em Converte o tipo de dados Date para D\+A\+TA. \end{DoxyCompactList}\item 
+D\+A\+TA \hyperlink{data_8c_ab23dd35b5148c74dbd148d3ed6546e94}{insere\+Data} (char \hyperlink{structdata}{data}\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Converte a data que está em string para o tipo D\+A\+TA. \end{DoxyCompactList}\item 
+D\+A\+TA \hyperlink{data_8c_af28c4e945427aab3db4f8d903b05ec9a}{clone\+\_\+\+D\+A\+TA} (D\+A\+TA d)
+\begin{DoxyCompactList}\small\item\em Faz um clone da data. \end{DoxyCompactList}\item 
+int \hyperlink{data_8c_aad02c8f40b86db7f3f28ef02d3e38e43}{compara\+Datas} (D\+A\+TA d1, D\+A\+TA d2)
+\begin{DoxyCompactList}\small\item\em Compara duas datas. \end{DoxyCompactList}\item 
+int \hyperlink{data_8c_aba5abc4d00c32f3ccc2b31fb4e8f8d27}{get\+\_\+data\+\_\+dia} (D\+A\+TA d)
+\begin{DoxyCompactList}\small\item\em Devolve o dia da data. \end{DoxyCompactList}\item 
+int \hyperlink{data_8c_aa42845ad71d20ea78ce62b97c6b0ac71}{get\+\_\+data\+\_\+mes} (D\+A\+TA d)
+\begin{DoxyCompactList}\small\item\em Devolve o mes da data. \end{DoxyCompactList}\item 
+int \hyperlink{data_8c_a27a481d5414974d10f3a97a901f51203}{get\+\_\+data\+\_\+ano} (D\+A\+TA d)
+\begin{DoxyCompactList}\small\item\em Devolve o ano da data. \end{DoxyCompactList}\item 
+void \hyperlink{data_8c_afc24fdfc9961b10b52590080cee96a0b}{free\+\_\+data} (D\+A\+TA d)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocado pela a struct D\+A\+TA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Guarda a data de um post. 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{data.\+c@{data.\+c}!clone\+\_\+\+D\+A\+TA@{clone\+\_\+\+D\+A\+TA}}
+\index{clone\+\_\+\+D\+A\+TA@{clone\+\_\+\+D\+A\+TA}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{clone\+\_\+\+D\+A\+T\+A(\+D\+A\+T\+A d)}{clone_DATA(DATA d)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+A\+TA clone\+\_\+\+D\+A\+TA (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_af28c4e945427aab3db4f8d903b05ec9a}{}\label{data_8c_af28c4e945427aab3db4f8d903b05ec9a}
+
+
+Faz um clone da data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+TA} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+A\+TA 
+\end{DoxyReturn}
+\index{data.\+c@{data.\+c}!compara\+Datas@{compara\+Datas}}
+\index{compara\+Datas@{compara\+Datas}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{compara\+Datas(\+D\+A\+T\+A d1, D\+A\+T\+A d2)}{comparaDatas(DATA d1, DATA d2)}}]{\setlength{\rightskip}{0pt plus 5cm}int compara\+Datas (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{d1, }
+\item[{D\+A\+TA}]{d2}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_aad02c8f40b86db7f3f28ef02d3e38e43}{}\label{data_8c_aad02c8f40b86db7f3f28ef02d3e38e43}
+
+
+Compara duas datas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+TA} & \\
+\hline
+{\em D\+A\+TA} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um inteiro que identifica a data maior 
+\end{DoxyReturn}
+\index{data.\+c@{data.\+c}!date\+Todata@{date\+Todata}}
+\index{date\+Todata@{date\+Todata}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{date\+Todata(\+Date a)}{dateTodata(Date a)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+A\+TA date\+Todata (
+\begin{DoxyParamCaption}
+\item[{Date}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_a9531dfea0de6c41ab0510c934c0e215f}{}\label{data_8c_a9531dfea0de6c41ab0510c934c0e215f}
+
+
+Converte o tipo de dados Date para D\+A\+TA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data no tipo D\+A\+TA 
+\end{DoxyReturn}
+\index{data.\+c@{data.\+c}!free\+\_\+data@{free\+\_\+data}}
+\index{free\+\_\+data@{free\+\_\+data}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+data(\+D\+A\+T\+A d)}{free_data(DATA d)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_afc24fdfc9961b10b52590080cee96a0b}{}\label{data_8c_afc24fdfc9961b10b52590080cee96a0b}
+
+
+Liberta a memoria alocado pela a struct D\+A\+TA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+TA} & \\
+\hline
+\end{DoxyParams}
+\index{data.\+c@{data.\+c}!get\+\_\+data\+\_\+ano@{get\+\_\+data\+\_\+ano}}
+\index{get\+\_\+data\+\_\+ano@{get\+\_\+data\+\_\+ano}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+data\+\_\+ano(\+D\+A\+T\+A d)}{get_data_ano(DATA d)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+data\+\_\+ano (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_a27a481d5414974d10f3a97a901f51203}{}\label{data_8c_a27a481d5414974d10f3a97a901f51203}
+
+
+Devolve o ano da data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+TA} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ano 
+\end{DoxyReturn}
+\index{data.\+c@{data.\+c}!get\+\_\+data\+\_\+dia@{get\+\_\+data\+\_\+dia}}
+\index{get\+\_\+data\+\_\+dia@{get\+\_\+data\+\_\+dia}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+data\+\_\+dia(\+D\+A\+T\+A d)}{get_data_dia(DATA d)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+data\+\_\+dia (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_aba5abc4d00c32f3ccc2b31fb4e8f8d27}{}\label{data_8c_aba5abc4d00c32f3ccc2b31fb4e8f8d27}
+
+
+Devolve o dia da data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+TA} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dia 
+\end{DoxyReturn}
+\index{data.\+c@{data.\+c}!get\+\_\+data\+\_\+mes@{get\+\_\+data\+\_\+mes}}
+\index{get\+\_\+data\+\_\+mes@{get\+\_\+data\+\_\+mes}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+data\+\_\+mes(\+D\+A\+T\+A d)}{get_data_mes(DATA d)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+data\+\_\+mes (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_aa42845ad71d20ea78ce62b97c6b0ac71}{}\label{data_8c_aa42845ad71d20ea78ce62b97c6b0ac71}
+
+
+Devolve o mes da data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+TA} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mes 
+\end{DoxyReturn}
+\index{data.\+c@{data.\+c}!insere\+Data@{insere\+Data}}
+\index{insere\+Data@{insere\+Data}!data.\+c@{data.\+c}}
+\subsubsection[{\texorpdfstring{insere\+Data(char data[])}{insereData(char data[])}}]{\setlength{\rightskip}{0pt plus 5cm}D\+A\+TA insere\+Data (
+\begin{DoxyParamCaption}
+\item[{char}]{data\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{data_8c_ab23dd35b5148c74dbd148d3ed6546e94}{}\label{data_8c_ab23dd35b5148c74dbd148d3ed6546e94}
+
+
+Converte a data que está em string para o tipo D\+A\+TA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data no tipo D\+A\+TA 
+\end{DoxyReturn}

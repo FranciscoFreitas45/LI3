@@ -1,0 +1,772 @@
+\hypertarget{avl_8c}{}\section{avl.\+c File Reference}
+\label{avl_8c}\index{avl.\+c@{avl.\+c}}
+
+
+\hyperlink{structmyAVL}{my\+A\+VL} Arvore binaria de post  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}posts.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}avl.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}load.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tag\+\_\+ligada.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mytag.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}structgen.\+h\char`\"{}}\\*
+Include dependency graph for avl.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmyAVL}{my\+A\+VL}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{avl_8c_a8cfee1a57af6db1eca2bb614959d883f}{getaltura} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em \mbox{[}getaltura Funcao que calcula a altura da A\+VL\mbox{]} \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aec7f0631fcfe5d1e0d7926e94c525d42}{creat\+New\+Node} (D\+A\+TA key, Post \hyperlink{structpost}{post})
+\begin{DoxyCompactList}\small\item\em \mbox{[}creat\+New\+Node Cria um nodo novo na A\+VL\mbox{]} \end{DoxyCompactList}\item 
+void \hyperlink{avl_8c_abfbf0b371e197d19858b7f0c7865919c}{inserenodo} (A\+VL a, Post b)
+\begin{DoxyCompactList}\small\item\em Funcao que insere o novo post no array de posts. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aa111064bcacbf5bc09eb211eba189010}{rotateright} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Faz a rotacao a direita da A\+VL quando esta nao esta balanceada. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aa26d5ec8f0a2a48be2f347a837711e6a}{rotateleft} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Roda a A\+VL para a esquerda quando esta nao esta balanceada. \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_a4bf388b2bd23ed144acd2ad6c0e99533}{getbalance\+Factor} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Calcula o factor de balanceamento da A\+VL. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_a6db63fb4988a2d4eb6da172798f233d7}{balance} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Funcao que de acordo com o desbalanceamento da arvore, balanceia a A\+VL. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aec9be8b8a5b1e373354425a078d2d67d}{insertin\+A\+VL} (D\+A\+TA key, Post \hyperlink{structpost}{post}, A\+VL a)
+\begin{DoxyCompactList}\small\item\em Funcao que insere um novo nodo na A\+VL, e se o nodo ja existir, insere ordenadamente no array de posts,de acordo com a key. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_a401ea76a6a8bfb3b52e5c16f0d8d967e}{maxvalue} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Calcula o nodo mais a direita, maior nodo da A\+VL. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_addbf99f3f435ef7bfcb2495a51e017e4}{minvalue} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Calcula o nodo mais a esqueda, menor nodo da A\+VL. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aa22eb44e000b536563b4dabd90228c90}{previousin\+Order} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Calcula o nodo que esta anteriormente em ordem. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_a5e190401be46082fa898ce90d33d2a22}{nextinorder} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Calcula o nodo ordenado, logo a seguir ao nodo dado. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aa19708ca526a321adb51c73e00567a0a}{find\+First} (A\+VL root, D\+A\+TA minkey)
+\begin{DoxyCompactList}\small\item\em Procura a data do primeiro post com a key na A\+VL, se existir devolve o nodo, senao procura no resto da arvore se existe de acordo com a ordenacao das datas. \end{DoxyCompactList}\item 
+A\+VL \hyperlink{avl_8c_aa9634d19f336a7d9855431fe165d37e1}{find\+Last} (A\+VL root, D\+A\+TA maxkey)
+\begin{DoxyCompactList}\small\item\em Procura o ultimo nodo com uma certa key, e se encontrar, devolve o nodo, senao, procura no resto da arvore de acordo com a ordenacao por datas da A\+VL. \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_aca1459b71d4af00038249e01ef52ce5f}{isbalanced} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Verifica se a A\+VL esta balanceada (usando a funcao que o fator de balanceamento) \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_a57cd8ca3d7a8bb2fca065a6b2a818a3f}{getalturaR} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Calcula a altura da arvore recursivamente, mais usada para testes. \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_ad5598df81eda18b05a1161f4f5bdad8c}{isbalancedR} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Verifica recursivamente se a A\+VL esta balanceada, tambem para testes. \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_a2f640ad1b09169d3407d1ad716f82827}{are\+A\+L\+Lpointeres\+OK} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Verifica se os apontadores da arvore estao corretos, tambem de teste. \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_aef90ff0394349f22476566c86052a883}{calcpossiblenodes} (int h)
+\item 
+L\+O\+N\+G\+\_\+pair \hyperlink{avl_8c_ad4ff5845fe8f5a6c4a06e2dcc950bddd}{get\+\_\+\+N\+U\+Mperguntas\+Respostas} (A\+VL a, D\+A\+TA begin, D\+A\+TA end)
+\begin{DoxyCompactList}\small\item\em Calcula o numero de respostas e perguntas dentro de uma certa data, fazendo a comparacao entre os type\+ID. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{avl_8c_a5a6f33a509281f34f6e90556020ac889}{perguntascomtag} (A\+VL a, char $\ast$tag, D\+A\+TA begin, D\+A\+TA end)
+\begin{DoxyCompactList}\small\item\em Corre o intervalo de tempo, e procura em todas as perguntas, se tem a tag passada como argumento. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{avl_8c_ad8e893bdbcf8c7e5d25f7e8a3352699c}{melhoresscore} (A\+VL a, int N, D\+A\+TA begin, D\+A\+TA end, int tamanho)
+\begin{DoxyCompactList}\small\item\em Procura neste intervalo,as N respostas com mais score. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{avl_8c_aa5cb1307627a1e96c00892d06fe9001e}{maisrespostas} (A\+VL a, int N, D\+A\+TA begin, D\+A\+TA end)
+\begin{DoxyCompactList}\small\item\em Procura neste intervalo,as N perguntas com mais respostas. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{avl_8c_a70571a67a1ef1f1bed0b1593f547de88}{palavra\+No\+Titulo} (A\+VL a, char $\ast$word, int N)
+\begin{DoxyCompactList}\small\item\em Verifica se uma certa palavra esta no titulo da pergunta. \end{DoxyCompactList}\item 
+int \hyperlink{avl_8c_a9c857bde2e9c3368741e9c3037fffa6d}{cotacao} (int score, int reputation, int coment)
+\begin{DoxyCompactList}\small\item\em Calcula a cotacao da resposta. \end{DoxyCompactList}\item 
+long \hyperlink{avl_8c_ace9640465354bfacbc1d19550c84ac16}{melhor\+\_\+resposta} (A\+VL a, D\+A\+TA begin, long id, int N)
+\begin{DoxyCompactList}\small\item\em Calcula a resposta com melhor cotacao. \end{DoxyCompactList}\item 
+void \hyperlink{avl_8c_a5cff98bff5b41f95e99126a4f1c8c497}{passto\+Struct} (gpointer key, gpointer value, gpointer \hyperlink{structdata}{data})
+\begin{DoxyCompactList}\small\item\em Passa o valor de cada nodo da Hash table para a struct auxiliar A\+R\+R\+AY. \end{DoxyCompactList}\item 
+void \hyperlink{avl_8c_a00f8eed3cef9d644f165f8d88934a1d9}{insere\+\_\+na\+\_\+hash} (Tags t, G\+Hash\+Table $\ast$tag, G\+Hash\+Table $\ast$hastag)
+\begin{DoxyCompactList}\small\item\em Insere na hash table auxiliar o nome da tag, ou se ja existir, incrementa a contagem dessa tag. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{avl_8c_aefc89bbf280a4f3f029f07730accf350}{melhor\+Reputacao\+Com\+Tags} (A\+VL a, int N, int nusers, D\+A\+TA begin, D\+A\+TA end, G\+Hash\+Table $\ast$hashtag)
+\begin{DoxyCompactList}\small\item\em Calcula os N users com mais reputacao e as N tags mais usadas por eles. \end{DoxyCompactList}\item 
+void \hyperlink{avl_8c_ae1304a5081d52a0a24b23883f65c37cd}{free\+A\+VL} (A\+VL a)
+\begin{DoxyCompactList}\small\item\em Liberta a memoria alocada pela A\+VL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structmyAVL}{my\+A\+VL} Arvore binaria de post 
+
+\begin{DoxyAuthor}{Author}
+Grupo56 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em altura} & altura da A\+VL \\
+\hline
+{\em $\ast$dir} & apontador para a direita da A\+VL \\
+\hline
+{\em $\ast$esq} & apontador para a esquerda da A\+VL \\
+\hline
+{\em $\ast$pai} & apontador para o pai do nodo \\
+\hline
+{\em key} & chave de data pela qual a A\+VL vai ser ordenada \\
+\hline
+{\em numposts} & numero de posts que o nodo contem \\
+\hline
+{\em lista\+\_\+posts} & apontador para o array de post \\
+\hline
+{\em isleft} & se for 1,o nodo e a esquerda do seu pai, se for 0, e a direita,e se for -\/1, e a raiz da A\+VL \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\index{avl.\+c@{avl.\+c}!are\+A\+L\+Lpointeres\+OK@{are\+A\+L\+Lpointeres\+OK}}
+\index{are\+A\+L\+Lpointeres\+OK@{are\+A\+L\+Lpointeres\+OK}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{are\+A\+L\+Lpointeres\+O\+K(\+A\+V\+L a)}{areALLpointeresOK(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}int are\+A\+L\+Lpointeres\+OK (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a2f640ad1b09169d3407d1ad716f82827}{}\label{avl_8c_a2f640ad1b09169d3407d1ad716f82827}
+
+
+Verifica se os apontadores da arvore estao corretos, tambem de teste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna se os apontadores da A\+VL estao corretos ou nao 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!balance@{balance}}
+\index{balance@{balance}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{balance(\+A\+V\+L a)}{balance(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL balance (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a6db63fb4988a2d4eb6da172798f233d7}{}\label{avl_8c_a6db63fb4988a2d4eb6da172798f233d7}
+
+
+Funcao que de acordo com o desbalanceamento da arvore, balanceia a A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+VL depois de balanceada 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!calcpossiblenodes@{calcpossiblenodes}}
+\index{calcpossiblenodes@{calcpossiblenodes}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{calcpossiblenodes(int h)}{calcpossiblenodes(int h)}}]{\setlength{\rightskip}{0pt plus 5cm}int calcpossiblenodes (
+\begin{DoxyParamCaption}
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aef90ff0394349f22476566c86052a883}{}\label{avl_8c_aef90ff0394349f22476566c86052a883}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!cotacao@{cotacao}}
+\index{cotacao@{cotacao}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{cotacao(int score, int reputation, int coment)}{cotacao(int score, int reputation, int coment)}}]{\setlength{\rightskip}{0pt plus 5cm}int cotacao (
+\begin{DoxyParamCaption}
+\item[{int}]{score, }
+\item[{int}]{reputation, }
+\item[{int}]{coment}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a9c857bde2e9c3368741e9c3037fffa6d}{}\label{avl_8c_a9c857bde2e9c3368741e9c3037fffa6d}
+
+
+Calcula a cotacao da resposta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & \\
+\hline
+{\em reputation} & \\
+\hline
+{\em coment} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a cotacao calculada 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!creat\+New\+Node@{creat\+New\+Node}}
+\index{creat\+New\+Node@{creat\+New\+Node}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{creat\+New\+Node(\+D\+A\+T\+A key, Post post)}{creatNewNode(DATA key, Post post)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL creat\+New\+Node (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{key, }
+\item[{Post}]{post}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aec7f0631fcfe5d1e0d7926e94c525d42}{}\label{avl_8c_aec7f0631fcfe5d1e0d7926e94c525d42}
+
+
+\mbox{[}creat\+New\+Node Cria um nodo novo na A\+VL\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{[}data de ordenacao\mbox{]} \\
+\hline
+{\em post} & \mbox{[}post\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}A\+VL com o novo novo inserido\mbox{]} 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!find\+First@{find\+First}}
+\index{find\+First@{find\+First}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{find\+First(\+A\+V\+L root, D\+A\+T\+A minkey)}{findFirst(AVL root, DATA minkey)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL find\+First (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{root, }
+\item[{D\+A\+TA}]{minkey}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aa19708ca526a321adb51c73e00567a0a}{}\label{avl_8c_aa19708ca526a321adb51c73e00567a0a}
+
+
+Procura a data do primeiro post com a key na A\+VL, se existir devolve o nodo, senao procura no resto da arvore se existe de acordo com a ordenacao das datas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Raiz da arvore \\
+\hline
+{\em minkey} & Data passada como argumento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo com aquela key, e se nao encontrar nenhum com aquela data na Arvore retorna o nextin\+Order 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!find\+Last@{find\+Last}}
+\index{find\+Last@{find\+Last}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{find\+Last(\+A\+V\+L root, D\+A\+T\+A maxkey)}{findLast(AVL root, DATA maxkey)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL find\+Last (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{root, }
+\item[{D\+A\+TA}]{maxkey}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aa9634d19f336a7d9855431fe165d37e1}{}\label{avl_8c_aa9634d19f336a7d9855431fe165d37e1}
+
+
+Procura o ultimo nodo com uma certa key, e se encontrar, devolve o nodo, senao, procura no resto da arvore de acordo com a ordenacao por datas da A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Raiz da arvore \\
+\hline
+{\em maxkey} & Data passada como argumento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo com a key, e se nao encontrar nenhum, devolve o previousin\+Order 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!free\+A\+VL@{free\+A\+VL}}
+\index{free\+A\+VL@{free\+A\+VL}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{free\+A\+V\+L(\+A\+V\+L a)}{freeAVL(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+A\+VL (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_ae1304a5081d52a0a24b23883f65c37cd}{}\label{avl_8c_ae1304a5081d52a0a24b23883f65c37cd}
+
+
+Liberta a memoria alocada pela A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\index{avl.\+c@{avl.\+c}!get\+\_\+\+N\+U\+Mperguntas\+Respostas@{get\+\_\+\+N\+U\+Mperguntas\+Respostas}}
+\index{get\+\_\+\+N\+U\+Mperguntas\+Respostas@{get\+\_\+\+N\+U\+Mperguntas\+Respostas}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+N\+U\+Mperguntas\+Respostas(\+A\+V\+L a, D\+A\+T\+A begin, D\+A\+T\+A end)}{get_NUMperguntasRespostas(AVL a, DATA begin, DATA end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+pair get\+\_\+\+N\+U\+Mperguntas\+Respostas (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{D\+A\+TA}]{begin, }
+\item[{D\+A\+TA}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_ad4ff5845fe8f5a6c4a06e2dcc950bddd}{}\label{avl_8c_ad4ff5845fe8f5a6c4a06e2dcc950bddd}
+
+
+Calcula o numero de respostas e perguntas dentro de uma certa data, fazendo a comparacao entre os type\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em begin} & Data passada como argumento \\
+\hline
+{\em end} & Segunda data passada como argumento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+pair, com o numero de respostas, e o numero de perguntas 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!getaltura@{getaltura}}
+\index{getaltura@{getaltura}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{getaltura(\+A\+V\+L a)}{getaltura(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}int getaltura (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a8cfee1a57af6db1eca2bb614959d883f}{}\label{avl_8c_a8cfee1a57af6db1eca2bb614959d883f}
+
+
+\mbox{[}getaltura Funcao que calcula a altura da A\+VL\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{[}A\+VL\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Altura da A\+VL\mbox{]} 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!getalturaR@{getalturaR}}
+\index{getalturaR@{getalturaR}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{getaltura\+R(\+A\+V\+L a)}{getalturaR(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}int getalturaR (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a57cd8ca3d7a8bb2fca065a6b2a818a3f}{}\label{avl_8c_a57cd8ca3d7a8bb2fca065a6b2a818a3f}
+
+
+Calcula a altura da arvore recursivamente, mais usada para testes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Altura da A\+VL 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!getbalance\+Factor@{getbalance\+Factor}}
+\index{getbalance\+Factor@{getbalance\+Factor}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{getbalance\+Factor(\+A\+V\+L a)}{getbalanceFactor(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}int getbalance\+Factor (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a4bf388b2bd23ed144acd2ad6c0e99533}{}\label{avl_8c_a4bf388b2bd23ed144acd2ad6c0e99533}
+
+
+Calcula o factor de balanceamento da A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Factor que diz se a A\+VL esta balanceada ou nao, e para que lado nao esta 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!insere\+\_\+na\+\_\+hash@{insere\+\_\+na\+\_\+hash}}
+\index{insere\+\_\+na\+\_\+hash@{insere\+\_\+na\+\_\+hash}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{insere\+\_\+na\+\_\+hash(\+Tags t, G\+Hash\+Table $\ast$tag, G\+Hash\+Table $\ast$hastag)}{insere_na_hash(Tags t, GHashTable *tag, GHashTable *hastag)}}]{\setlength{\rightskip}{0pt plus 5cm}void insere\+\_\+na\+\_\+hash (
+\begin{DoxyParamCaption}
+\item[{Tags}]{t, }
+\item[{G\+Hash\+Table $\ast$}]{tag, }
+\item[{G\+Hash\+Table $\ast$}]{hastag}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a00f8eed3cef9d644f165f8d88934a1d9}{}\label{avl_8c_a00f8eed3cef9d644f165f8d88934a1d9}
+
+
+Insere na hash table auxiliar o nome da tag, ou se ja existir, incrementa a contagem dessa tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Lista ligada de Tags \\
+\hline
+{\em tag} & hash table auxiliar \\
+\hline
+{\em hastag} & \\
+\hline
+\end{DoxyParams}
+\index{avl.\+c@{avl.\+c}!inserenodo@{inserenodo}}
+\index{inserenodo@{inserenodo}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{inserenodo(\+A\+V\+L a, Post b)}{inserenodo(AVL a, Post b)}}]{\setlength{\rightskip}{0pt plus 5cm}void inserenodo (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{Post}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_abfbf0b371e197d19858b7f0c7865919c}{}\label{avl_8c_abfbf0b371e197d19858b7f0c7865919c}
+
+
+Funcao que insere o novo post no array de posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em b} & Post que ira ser inserido \\
+\hline
+\end{DoxyParams}
+\index{avl.\+c@{avl.\+c}!insertin\+A\+VL@{insertin\+A\+VL}}
+\index{insertin\+A\+VL@{insertin\+A\+VL}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{insertin\+A\+V\+L(\+D\+A\+T\+A key, Post post, A\+V\+L a)}{insertinAVL(DATA key, Post post, AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL insertin\+A\+VL (
+\begin{DoxyParamCaption}
+\item[{D\+A\+TA}]{key, }
+\item[{Post}]{post, }
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aec9be8b8a5b1e373354425a078d2d67d}{}\label{avl_8c_aec9be8b8a5b1e373354425a078d2d67d}
+
+
+Funcao que insere um novo nodo na A\+VL, e se o nodo ja existir, insere ordenadamente no array de posts,de acordo com a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & data para inserir na A\+VL \\
+\hline
+{\em post} & post que ira ser inserido na A\+VL \\
+\hline
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+VL com o novo post inserido, de acordo com a key 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!isbalanced@{isbalanced}}
+\index{isbalanced@{isbalanced}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{isbalanced(\+A\+V\+L a)}{isbalanced(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}int isbalanced (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aca1459b71d4af00038249e01ef52ce5f}{}\label{avl_8c_aca1459b71d4af00038249e01ef52ce5f}
+
+
+Verifica se a A\+VL esta balanceada (usando a funcao que o fator de balanceamento) 
+
+\begin{DoxyReturn}{Returns}
+1 se o fator de balanceamento for maior que 1 ou menor que -\/1, e retorna 0 se o fator de balanceamento for igual a 1 ou -\/1 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!isbalancedR@{isbalancedR}}
+\index{isbalancedR@{isbalancedR}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{isbalanced\+R(\+A\+V\+L a)}{isbalancedR(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}int isbalancedR (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_ad5598df81eda18b05a1161f4f5bdad8c}{}\label{avl_8c_ad5598df81eda18b05a1161f4f5bdad8c}
+
+
+Verifica recursivamente se a A\+VL esta balanceada, tambem para testes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna se a A\+VL esta balanceada ou nao 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!maisrespostas@{maisrespostas}}
+\index{maisrespostas@{maisrespostas}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{maisrespostas(\+A\+V\+L a, int N, D\+A\+T\+A begin, D\+A\+T\+A end)}{maisrespostas(AVL a, int N, DATA begin, DATA end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list maisrespostas (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{int}]{N, }
+\item[{D\+A\+TA}]{begin, }
+\item[{D\+A\+TA}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aa5cb1307627a1e96c00892d06fe9001e}{}\label{avl_8c_aa5cb1307627a1e96c00892d06fe9001e}
+
+
+Procura neste intervalo,as N perguntas com mais respostas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em N} & \\
+\hline
+{\em begin} & Data passada como argumento \\
+\hline
+{\em end} & Segunda data passada como argumento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!maxvalue@{maxvalue}}
+\index{maxvalue@{maxvalue}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{maxvalue(\+A\+V\+L a)}{maxvalue(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL maxvalue (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a401ea76a6a8bfb3b52e5c16f0d8d967e}{}\label{avl_8c_a401ea76a6a8bfb3b52e5c16f0d8d967e}
+
+
+Calcula o nodo mais a direita, maior nodo da A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo mais a direita da A\+VL, ou raiz quando nao ha direita 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!melhor\+\_\+resposta@{melhor\+\_\+resposta}}
+\index{melhor\+\_\+resposta@{melhor\+\_\+resposta}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{melhor\+\_\+resposta(\+A\+V\+L a, D\+A\+T\+A begin, long id, int N)}{melhor_resposta(AVL a, DATA begin, long id, int N)}}]{\setlength{\rightskip}{0pt plus 5cm}long melhor\+\_\+resposta (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{D\+A\+TA}]{begin, }
+\item[{long}]{id, }
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_ace9640465354bfacbc1d19550c84ac16}{}\label{avl_8c_ace9640465354bfacbc1d19550c84ac16}
+
+
+Calcula a resposta com melhor cotacao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em begin} & Data dada por argumento(criacao da pergunta) \\
+\hline
+{\em end} & Segunda data dada como argumento \\
+\hline
+{\em N} & numero de respostas que a pergunta tem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resposta com melhor cotacao 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!melhoresscore@{melhoresscore}}
+\index{melhoresscore@{melhoresscore}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{melhoresscore(\+A\+V\+L a, int N, D\+A\+T\+A begin, D\+A\+T\+A end, int tamanho)}{melhoresscore(AVL a, int N, DATA begin, DATA end, int tamanho)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list melhoresscore (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{int}]{N, }
+\item[{D\+A\+TA}]{begin, }
+\item[{D\+A\+TA}]{end, }
+\item[{int}]{tamanho}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_ad8e893bdbcf8c7e5d25f7e8a3352699c}{}\label{avl_8c_ad8e893bdbcf8c7e5d25f7e8a3352699c}
+
+
+Procura neste intervalo,as N respostas com mais score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em N} & \\
+\hline
+{\em begin} & Data passada como argumento \\
+\hline
+{\em end} & Segunda data passada como argumento \\
+\hline
+{\em tamanho} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!melhor\+Reputacao\+Com\+Tags@{melhor\+Reputacao\+Com\+Tags}}
+\index{melhor\+Reputacao\+Com\+Tags@{melhor\+Reputacao\+Com\+Tags}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{melhor\+Reputacao\+Com\+Tags(\+A\+V\+L a, int N, int nusers, D\+A\+T\+A begin, D\+A\+T\+A end, G\+Hash\+Table $\ast$hashtag)}{melhorReputacaoComTags(AVL a, int N, int nusers, DATA begin, DATA end, GHashTable *hashtag)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list melhor\+Reputacao\+Com\+Tags (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{int}]{N, }
+\item[{int}]{nusers, }
+\item[{D\+A\+TA}]{begin, }
+\item[{D\+A\+TA}]{end, }
+\item[{G\+Hash\+Table $\ast$}]{hashtag}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aefc89bbf280a4f3f029f07730accf350}{}\label{avl_8c_aefc89bbf280a4f3f029f07730accf350}
+
+
+Calcula os N users com mais reputacao e as N tags mais usadas por eles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em N} & \\
+\hline
+{\em nusers} & \\
+\hline
+{\em begin} & \\
+\hline
+{\em end} & \\
+\hline
+{\em hashtag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna uma L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!minvalue@{minvalue}}
+\index{minvalue@{minvalue}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{minvalue(\+A\+V\+L a)}{minvalue(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL minvalue (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_addbf99f3f435ef7bfcb2495a51e017e4}{}\label{avl_8c_addbf99f3f435ef7bfcb2495a51e017e4}
+
+
+Calcula o nodo mais a esqueda, menor nodo da A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo mais a esquerda da A\+VL, ou raiz quando nao ha esquerda 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!nextinorder@{nextinorder}}
+\index{nextinorder@{nextinorder}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{nextinorder(\+A\+V\+L a)}{nextinorder(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL nextinorder (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a5e190401be46082fa898ce90d33d2a22}{}\label{avl_8c_a5e190401be46082fa898ce90d33d2a22}
+
+
+Calcula o nodo ordenado, logo a seguir ao nodo dado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Nodo da A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo logo a seguir em ordem 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!palavra\+No\+Titulo@{palavra\+No\+Titulo}}
+\index{palavra\+No\+Titulo@{palavra\+No\+Titulo}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{palavra\+No\+Titulo(\+A\+V\+L a, char $\ast$word, int N)}{palavraNoTitulo(AVL a, char *word, int N)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list palavra\+No\+Titulo (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{char $\ast$}]{word, }
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a70571a67a1ef1f1bed0b1593f547de88}{}\label{avl_8c_a70571a67a1ef1f1bed0b1593f547de88}
+
+
+Verifica se uma certa palavra esta no titulo da pergunta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em word} & Palavra que ira ser procurada no titulo \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!passto\+Struct@{passto\+Struct}}
+\index{passto\+Struct@{passto\+Struct}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{passto\+Struct(gpointer key, gpointer value, gpointer data)}{passtoStruct(gpointer key, gpointer value, gpointer data)}}]{\setlength{\rightskip}{0pt plus 5cm}void passto\+Struct (
+\begin{DoxyParamCaption}
+\item[{gpointer}]{key, }
+\item[{gpointer}]{value, }
+\item[{gpointer}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a5cff98bff5b41f95e99126a4f1c8c497}{}\label{avl_8c_a5cff98bff5b41f95e99126a4f1c8c497}
+
+
+Passa o valor de cada nodo da Hash table para a struct auxiliar A\+R\+R\+AY. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\index{avl.\+c@{avl.\+c}!perguntascomtag@{perguntascomtag}}
+\index{perguntascomtag@{perguntascomtag}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{perguntascomtag(\+A\+V\+L a, char $\ast$tag, D\+A\+T\+A begin, D\+A\+T\+A end)}{perguntascomtag(AVL a, char *tag, DATA begin, DATA end)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list perguntascomtag (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a, }
+\item[{char $\ast$}]{tag, }
+\item[{D\+A\+TA}]{begin, }
+\item[{D\+A\+TA}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_a5a6f33a509281f34f6e90556020ac889}{}\label{avl_8c_a5a6f33a509281f34f6e90556020ac889}
+
+
+Corre o intervalo de tempo, e procura em todas as perguntas, se tem a tag passada como argumento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+{\em tag} & \\
+\hline
+{\em begin} & Data passada como argumento \\
+\hline
+{\em end} & Segunda data passada como argumento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna uma L\+O\+N\+G\+\_\+list 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!previousin\+Order@{previousin\+Order}}
+\index{previousin\+Order@{previousin\+Order}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{previousin\+Order(\+A\+V\+L a)}{previousinOrder(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL previousin\+Order (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aa22eb44e000b536563b4dabd90228c90}{}\label{avl_8c_aa22eb44e000b536563b4dabd90228c90}
+
+
+Calcula o nodo que esta anteriormente em ordem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Nodo da A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo anteriormente em ordem 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!rotateleft@{rotateleft}}
+\index{rotateleft@{rotateleft}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{rotateleft(\+A\+V\+L a)}{rotateleft(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL rotateleft (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aa26d5ec8f0a2a48be2f347a837711e6a}{}\label{avl_8c_aa26d5ec8f0a2a48be2f347a837711e6a}
+
+
+Roda a A\+VL para a esquerda quando esta nao esta balanceada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+VL depois derodada para a esquerda 
+\end{DoxyReturn}
+\index{avl.\+c@{avl.\+c}!rotateright@{rotateright}}
+\index{rotateright@{rotateright}!avl.\+c@{avl.\+c}}
+\subsubsection[{\texorpdfstring{rotateright(\+A\+V\+L a)}{rotateright(AVL a)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+VL rotateright (
+\begin{DoxyParamCaption}
+\item[{A\+VL}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{avl_8c_aa111064bcacbf5bc09eb211eba189010}{}\label{avl_8c_aa111064bcacbf5bc09eb211eba189010}
+
+
+Faz a rotacao a direita da A\+VL quando esta nao esta balanceada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+VL rodada para a direita 
+\end{DoxyReturn}
